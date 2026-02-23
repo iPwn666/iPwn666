@@ -92,15 +92,15 @@ If you want this section to shine on GitHub, the fastest win is to **pin 3–5 r
 ## Toolbox
 
 <p align="center">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff" />
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000" />
-  <img alt="React" src="https://img.shields.io/badge/React-20232a?logo=react&logoColor=61DAFB" />
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff" />
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-3C873A?logo=nodedotjs&logoColor=fff" />
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=fff" />
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-0db7ed?logo=docker&logoColor=fff" />
-  <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-326ce5?logo=kubernetes&logoColor=fff" />
-  <img alt="Terraform" src="https://img.shields.io/badge/Terraform-623CE4?logo=terraform&logoColor=fff" />
+  <img alt="TypeScript" height="20" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff" />
+  <img alt="JavaScript" height="20" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000" />
+  <img alt="React" height="20" src="https://img.shields.io/badge/React-20232a?logo=react&logoColor=61DAFB" />
+  <img alt="Next.js" height="20" src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff" />
+  <img alt="Node.js" height="20" src="https://img.shields.io/badge/Node.js-3C873A?logo=nodedotjs&logoColor=fff" />
+  <img alt="PostgreSQL" height="20" src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=fff" />
+  <img alt="Docker" height="20" src="https://img.shields.io/badge/Docker-0db7ed?logo=docker&logoColor=fff" />
+  <img alt="Kubernetes" height="20" src="https://img.shields.io/badge/Kubernetes-326ce5?logo=kubernetes&logoColor=fff" />
+  <img alt="Terraform" height="20" src="https://img.shields.io/badge/Terraform-623CE4?logo=terraform&logoColor=fff" />
 </p>
 
 ---
