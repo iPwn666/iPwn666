@@ -138,9 +138,9 @@ If you’re hiring or want to collaborate, email is best:
   <summary><b>GitHub stats</b></summary>
 
   <p>
-    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&cache_seconds=86400" loading="lazy" />
+    <img alt="GitHub Stats" width="495" height="195" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&cache_seconds=86400" loading="lazy" />
     <br />
-    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&cache_seconds=86400" loading="lazy" />
+    <img alt="Top Languages" width="300" height="120" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&cache_seconds=86400" loading="lazy" />
   </p>
 </details>
 
