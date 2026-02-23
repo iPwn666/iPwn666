@@ -32,6 +32,21 @@ I build **cloud‑native web apps** and **Progressive Web Apps (PWA)** that prio
 - 🔒 **Security‑conscious**: sensible defaults, least privilege, secure-by-design mindset
 - 🧠 **User‑centered thinking** from a healthcare background (clear communication, empathy, quality)
 
+## Performance & Efficiency Wins
+
+- Trim ship cost: budget JS, tree-shake deps, lazy-load heavy routes, and prioritize above-the-fold CSS.
+- Kill noisy calls: batch N+1 requests, paginate aggressively, cache at the edge, and debounce UI events.
+- Keep the main thread free: offload expensive work to workers/queues and avoid layout thrashing.
+- Watch and react: trace slow endpoints, set SLOs, and add alerts for long tasks and layout shifts.
+
+<details>
+  <summary><b>Quick debugging checklist for slow code</b></summary>
+
+- Profile where time goes (CPU + waterfall), then fix the top 2 offenders before touching anything else.
+- Simplify data flow: prefer streams over large payloads, cap retries, and validate caching headers.
+- Reduce re-renders: memoize inputs, flatten prop drilling, and keep components pure where possible.
+</details>
+
 ---
 
 ## What I do
@@ -99,6 +114,17 @@ If you want this section to shine on GitHub, the fastest win is to **pin 3–5 r
 
 ---
 
+<details>
+  <summary><b>Open this for a one-minute service menu</b></summary>
+
+- Onboarding sprint: ship a thin slice in week one, with perf budgets baked in.
+- Observability drop-in: dashboards + alerts for latency, errors, cold starts, and bundle size drift.
+- Frontend hardening: accessibility sweep, UX polish, and render performance fixes.
+- Cloud tune-up: IaC review, least-privilege updates, and CI/CD speed-ups.
+</details>
+
+---
+
 ## Contact
 
 If you’re hiring or want to collaborate, email is best:
@@ -117,3 +143,24 @@ If you’re hiring or want to collaborate, email is best:
     <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact" />
   </p>
 </details>
+
+---
+
+## Mini-game: README Runner (tap to jump)
+
+Click or tap inside the track to make the dino jump the cactus. Works in browsers that support inline SVG animations (Chrome, Edge, Firefox).
+
+<svg id="runner-game" viewBox="0 0 600 140" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mini dino runner game">
+  <rect width="600" height="140" fill="#0f172a" />
+  <rect y="110" width="600" height="4" fill="#38bdf8" />
+  <text x="20" y="30" fill="#e2e8f0" font-family="monospace" font-size="14">Click/tap to jump ▸ beat the cactus</text>
+  <rect id="runner" x="70" y="70" width="28" height="32" rx="4" fill="#a3e635">
+    <animate attributeName="y" dur="0.6s" begin="runner-game.click" keyTimes="0;0.35;0.7" values="70;18;70" calcMode="spline" keySplines="0.33 0.0 0.67 1;0.33 0.0 0.67 1" />
+  </rect>
+  <rect x="96" y="82" width="8" height="6" rx="1" fill="#1a2e05" />
+  <rect x="104" y="78" width="6" height="6" rx="1" fill="#1a2e05" />
+  <rect id="cactus" x="560" y="74" width="18" height="36" rx="2" fill="#f97316">
+    <animate attributeName="x" dur="2.4s" values="560;-40" repeatCount="indefinite" />
+  </rect>
+  <rect x="0" y="114" width="600" height="10" fill="#e2e8f0" opacity="0.3" />
+</svg>
