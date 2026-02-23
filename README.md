@@ -138,9 +138,9 @@ If you’re hiring or want to collaborate, email is best:
   <summary><b>GitHub stats</b></summary>
 
   <p>
-    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&cache_seconds=86400" />
+    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&cache_seconds=86400" loading="lazy" />
     <br />
-    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&cache_seconds=86400" />
+    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&cache_seconds=86400" loading="lazy" />
   </p>
 </details>
 
@@ -159,8 +159,8 @@ Click or tap inside the track to make the dino jump the cactus. Works in browser
   </rect>
   <rect x="96" y="82" width="8" height="6" rx="1" fill="#1a2e05" />
   <rect x="104" y="78" width="6" height="6" rx="1" fill="#1a2e05" />
-  <rect id="cactus" x="560" y="74" width="18" height="36" rx="2" fill="#f97316">
-    <animate attributeName="x" dur="2.4s" values="560;-40" repeatCount="indefinite" />
+  <rect id="cactus" y="74" width="18" height="36" rx="2" fill="#f97316">
+    <animateTransform attributeName="transform" type="translate" dur="2.4s" values="560 0;-40 0" repeatCount="indefinite" />
   </rect>
   <rect x="0" y="114" width="600" height="10" fill="#e2e8f0" opacity="0.3" />
 </svg>
