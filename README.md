@@ -138,9 +138,9 @@ If you’re hiring or want to collaborate, email is best:
   <summary><b>GitHub stats</b></summary>
 
   <p>
-    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true" />
+    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&cache_seconds=86400" />
     <br />
-    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact" />
+    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&cache_seconds=86400" />
   </p>
 </details>
 
@@ -155,7 +155,7 @@ Click or tap inside the track to make the dino jump the cactus. Works in browser
   <rect y="110" width="600" height="4" fill="#38bdf8" />
   <text x="20" y="30" fill="#e2e8f0" font-family="monospace" font-size="14">Click/tap to jump ▸ beat the cactus</text>
   <rect id="runner" x="70" y="70" width="28" height="32" rx="4" fill="#a3e635">
-    <animate attributeName="y" dur="0.6s" begin="runner-game.click" keyTimes="0;0.35;0.7" values="70;18;70" calcMode="spline" keySplines="0.33 0.0 0.67 1;0.33 0.0 0.67 1" />
+    <animate attributeName="y" dur="0.6s" begin="runner-game.click" restart="always" keyTimes="0;0.35;0.7;1" values="70;18;70;70" calcMode="spline" keySplines="0.33 0.0 0.67 1;0.33 0.0 0.67 1;0 0 1 1" />
   </rect>
   <rect x="96" y="82" width="8" height="6" rx="1" fill="#1a2e05" />
   <rect x="104" y="78" width="6" height="6" rx="1" fill="#1a2e05" />
