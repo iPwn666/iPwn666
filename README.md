@@ -163,5 +163,5 @@ Click or tap inside the track to make the dino jump the cactus. Works in browser
   <rect id="cactus" y="74" width="18" height="36" rx="2" fill="#f97316">
     <animateTransform attributeName="transform" type="translate" dur="2.4s" values="560 0;-40 0" repeatCount="indefinite" />
   </rect>
-  <rect x="0" y="114" width="600" height="10" fill="#e2e8f0" opacity="0.3" />
+  <rect x="0" y="114" width="600" height="10" fill="#e2e8f0" fill-opacity="0.3" />
 </svg>
