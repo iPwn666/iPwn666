@@ -92,15 +92,15 @@ If you want this section to shine on GitHub, the fastest win is to **pin 3–5 r
 ## Toolbox
 
 <p align="center">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff" />
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000" />
-  <img alt="React" src="https://img.shields.io/badge/React-20232a?logo=react&logoColor=61DAFB" />
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff" />
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-3C873A?logo=nodedotjs&logoColor=fff" />
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=fff" />
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-0db7ed?logo=docker&logoColor=fff" />
-  <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-326ce5?logo=kubernetes&logoColor=fff" />
-  <img alt="Terraform" src="https://img.shields.io/badge/Terraform-623CE4?logo=terraform&logoColor=fff" />
+  <img alt="TypeScript" height="20" loading="lazy" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff" />
+  <img alt="JavaScript" height="20" loading="lazy" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000" />
+  <img alt="React" height="20" loading="lazy" src="https://img.shields.io/badge/React-20232a?logo=react&logoColor=61DAFB" />
+  <img alt="Next.js" height="20" loading="lazy" src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff" />
+  <img alt="Node.js" height="20" loading="lazy" src="https://img.shields.io/badge/Node.js-3C873A?logo=nodedotjs&logoColor=fff" />
+  <img alt="PostgreSQL" height="20" loading="lazy" src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=fff" />
+  <img alt="Docker" height="20" loading="lazy" src="https://img.shields.io/badge/Docker-0db7ed?logo=docker&logoColor=fff" />
+  <img alt="Kubernetes" height="20" loading="lazy" src="https://img.shields.io/badge/Kubernetes-326ce5?logo=kubernetes&logoColor=fff" />
+  <img alt="Terraform" height="20" loading="lazy" src="https://img.shields.io/badge/Terraform-623CE4?logo=terraform&logoColor=fff" />
 </p>
 
 ---
@@ -138,9 +138,9 @@ If you’re hiring or want to collaborate, email is best:
   <summary><b>GitHub stats</b></summary>
 
   <p>
-    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true" />
+    <img alt="GitHub Stats" width="495" height="195" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&cache_seconds=86400" loading="lazy" />
     <br />
-    <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact" />
+    <img alt="Top Languages" width="300" height="120" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&cache_seconds=86400" loading="lazy" />
   </p>
 </details>
 
@@ -154,13 +154,14 @@ Click or tap inside the track to make the dino jump the cactus. Works in browser
   <rect width="600" height="140" fill="#0f172a" />
   <rect y="110" width="600" height="4" fill="#38bdf8" />
   <text x="20" y="30" fill="#e2e8f0" font-family="monospace" font-size="14">Click/tap to jump ▸ beat the cactus</text>
-  <rect id="runner" x="70" y="70" width="28" height="32" rx="4" fill="#a3e635">
-    <animate attributeName="y" dur="0.6s" begin="runner-game.click" keyTimes="0;0.35;0.7" values="70;18;70" calcMode="spline" keySplines="0.33 0.0 0.67 1;0.33 0.0 0.67 1" />
+  <g>
+    <animateTransform attributeName="transform" type="translate" dur="0.6s" begin="runner-game.click" restart="always" keyTimes="0;0.35;0.7;1" values="0 0;0 -52;0 0;0 0" calcMode="spline" keySplines="0.33 0.0 0.67 1;0.33 0.0 0.67 1;0 0 1 1" />
+    <rect id="runner" x="70" y="70" width="28" height="32" rx="4" fill="#a3e635" />
+    <rect x="96" y="82" width="8" height="6" rx="1" fill="#1a2e05" />
+    <rect x="104" y="78" width="6" height="6" rx="1" fill="#1a2e05" />
+  </g>
+  <rect id="cactus" y="74" width="18" height="36" rx="2" fill="#f97316">
+    <animateTransform attributeName="transform" type="translate" dur="2.4s" values="560 0;-40 0" repeatCount="indefinite" />
   </rect>
-  <rect x="96" y="82" width="8" height="6" rx="1" fill="#1a2e05" />
-  <rect x="104" y="78" width="6" height="6" rx="1" fill="#1a2e05" />
-  <rect id="cactus" x="560" y="74" width="18" height="36" rx="2" fill="#f97316">
-    <animate attributeName="x" dur="2.4s" values="560;-40" repeatCount="indefinite" />
-  </rect>
-  <rect x="0" y="114" width="600" height="10" fill="#e2e8f0" opacity="0.3" />
+  <rect x="0" y="114" width="600" height="10" fill="#e2e8f0" fill-opacity="0.3" />
 </svg>
