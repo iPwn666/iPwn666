@@ -1,167 +1,122 @@
-<!-- Profile README — Recruiter/Client mode -->
-
-<h1 align="center">František Kalášek</h1>
-
 <p align="center">
-  Full‑stack engineer • Cloud/DevOps • PWA
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=200&section=header&text=František%20Kalášek&fontSize=70&animation=fadeIn&fontAlignY=35" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://topwnz.com"><b>Portfolio</b></a> •
-  <a href="mailto:FandaKalasek@icloud.com"><b>Email</b></a> •
-  <a href="https://github.com/iPwn666?tab=repositories"><b>Repositories</b></a>
+  <b>Full‑stack Engineer • Cloud/DevOps • PWA Architect</b>
 </p>
 
 <p align="center">
-  <code>PWA-first</code> <code>Cloud-native</code> <code>Security by default</code> <code>Remote-friendly</code>
+  <a href="https://topwnz.com"><img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=react&logoColor=61DAFB" /></a>
+  <a href="mailto:FandaKalasek@icloud.com"><img src="https://img.shields.io/badge/Email-000?style=for-the-badge&logo=icloud&logoColor=fff" /></a>
+  <a href="https://github.com/iPwn666?tab=repositories"><img src="https://img.shields.io/badge/Repos-000?style=for-the-badge&logo=github&logoColor=fff" /></a>
 </p>
 
 <p align="center">
-  Czech Republic • Czech (native) • English (C1)
+  <img src="https://img.shields.io/badge/PWA--first-0ea5e9?style=flat-square" />
+  <img src="https://img.shields.io/badge/Cloud--native-0ea5e9?style=flat-square" />
+  <img src="https://img.shields.io/badge/Security--by--design-0ea5e9?style=flat-square" />
 </p>
 
 ---
 
-## Snapshot
+## 🚀 Snapshot
 
-I build **cloud‑native web apps** and **Progressive Web Apps (PWA)** that prioritize **performance, reliability, and maintainability**.
+I bridge the gap between complex cloud infrastructure and seamless user experiences. With a background in healthcare, I prioritize **empathy-driven UI** and **mission-critical reliability**.
 
-**What you can expect from me**
-- ⚙️ **End‑to‑end delivery**: design → implementation → deployment → monitoring
-- ☁️ **Cloud & DevOps**: architecture, CI/CD, automation, observability
-- 🔒 **Security‑conscious**: sensible defaults, least privilege, secure-by-design mindset
-- 🧠 **User‑centered thinking** from a healthcare background (clear communication, empathy, quality)
+- ⚙️ **End‑to‑end delivery**: I don't just write code; I own the architecture and the uptime.
+- 🔒 **Security First**: Least-privilege access and secure defaults are my baseline, not an afterthought.
+- ⚡ **Performance Geek**: If it’s not under a 200ms TTFB, it’s not finished.
 
-## Performance & Efficiency Wins
+---
 
-- Trim ship cost: budget JS, tree-shake deps, lazy-load heavy routes, and prioritize above-the-fold CSS.
-- Kill noisy calls: batch N+1 requests, paginate aggressively, cache at the edge, and debounce UI events.
-- Keep the main thread free: offload expensive work to workers/queues and avoid layout thrashing.
-- Watch and react: trace slow endpoints, set SLOs, and add alerts for long tasks and layout shifts.
+## 🛠️ My Tech Stack
 
-<details>
-  <summary><b>Quick debugging checklist for slow code</b></summary>
+| Category | Tools & Technologies |
+| :--- | :--- |
+| **Frontend** | `React` `Next.js` `TypeScript` `TailwindCSS` `PWA` |
+| **Backend** | `Node.js` `Go` `PostgreSQL` `Redis` `GraphQL` |
+| **Cloud/DevOps** | `AWS` `Docker` `Kubernetes` `Terraform` `GitHub Actions` |
+| **Monitoring** | `Prometheus` `Grafana` `Sentry` |
 
-- Profile where time goes (CPU + waterfall), then fix the top 2 offenders before touching anything else.
-- Simplify data flow: prefer streams over large payloads, cap retries, and validate caching headers.
-- Reduce re-renders: memoize inputs, flatten prop drilling, and keep components pure where possible.
+---
+
+## 📈 Engineering Impact
+
+<details open>
+<summary><b>Current Engineering Focus</b></summary>
+<br />
+
+- **Edge Computing:** Implementing Next.js Middleware for global request shaping.
+- **Bundle Optimization:** Reducing TBT (Total Blocking Time) on mobile devices via code-splitting.
+- **Infrastructure:** Hardening K8s clusters with automated security scanning.
 </details>
 
 ---
 
-## What I do
+## 📂 Featured Repositories
 
 <table>
   <tr>
-    <td>
-
-### Product & Web Engineering
-- **PWA / Web apps** (offline-first, push, app-shell patterns)
-- **Full‑stack development** (APIs, auth, data modeling, integrations)
-- **UI engineering** (clean UX, accessible UI, performance budgets)
-
-  </td>
-    <td>
-
-### Cloud & DevOps
-- **Cloud architecture** (AWS / Azure / GCP), Kubernetes & containerized workloads
-- **Infrastructure as Code** (Terraform), repeatable environments
-- **CI/CD pipelines**, automated testing & deployments
-- **Monitoring & optimization** (reliability, performance, cost awareness)
-
-  </td>
+    <td width="50%">
+      <b>🚀 Project Name A</b><br />
+      <i>Brief description of the impact/solution.</i><br />
+      <code>Next.js</code> <code>Terraform</code> <code>AWS</code>
+    </td>
+    <td width="50%">
+      <b>🔒 Project Name B</b><br />
+      <i>High-security auth implementation or PWA tool.</i><br />
+      <code>Node.js</code> <code>Docker</code> <code>Redis</code>
+    </td>
   </tr>
 </table>
 
 ---
 
-## Selected work
-
-- 🌐 **Portfolio / case studies:** https://topwnz.com
-
-If you want this section to shine on GitHub, the fastest win is to **pin 3–5 repositories** (public) that represent your best work and add them here as “Featured Projects”.
-
-**Template (copy/paste and fill):**
-- **Project Name** — one‑line outcome (e.g., “reduced load time by 40%”)
-  - Stack: Next.js • TS • Postgres • Docker
-  - Role: Solo / Lead / Contributor
-  - Links: Demo • Repo • Short write‑up
-
----
-
-## Toolbox
+## 📊 Interaction & Stats
 
 <p align="center">
-  <img alt="TypeScript" height="20" loading="lazy" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff" />
-  <img alt="JavaScript" height="20" loading="lazy" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000" />
-  <img alt="React" height="20" loading="lazy" src="https://img.shields.io/badge/React-20232a?logo=react&logoColor=61DAFB" />
-  <img alt="Next.js" height="20" loading="lazy" src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff" />
-  <img alt="Node.js" height="20" loading="lazy" src="https://img.shields.io/badge/Node.js-3C873A?logo=nodedotjs&logoColor=fff" />
-  <img alt="PostgreSQL" height="20" loading="lazy" src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=fff" />
-  <img alt="Docker" height="20" loading="lazy" src="https://img.shields.io/badge/Docker-0db7ed?logo=docker&logoColor=fff" />
-  <img alt="Kubernetes" height="20" loading="lazy" src="https://img.shields.io/badge/Kubernetes-326ce5?logo=kubernetes&logoColor=fff" />
-  <img alt="Terraform" height="20" loading="lazy" src="https://img.shields.io/badge/Terraform-623CE4?logo=terraform&logoColor=fff" />
+  <img align="left" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&theme=tokyonight&hide_border=true" />
+  <img align="center" height="180em" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
 
-## How I work
+## 🎮 The "Zero-Downtime" Runner
+*A metaphor for my deployments: Always moving, never crashing.*
 
-- ✅ Clear scope, written assumptions, and transparent tradeoffs
-- ✅ Frequent progress updates (short demos > long meetings)
-- ✅ Clean code, docs where it matters, and maintainable delivery
-- ✅ Pragmatic engineering: build what moves the needle, then harden it
-
----
-
-<details>
-  <summary><b>Open this for a one-minute service menu</b></summary>
-
-- Onboarding sprint: ship a thin slice in week one, with perf budgets baked in.
-- Observability drop-in: dashboards + alerts for latency, errors, cold starts, and bundle size drift.
-- Frontend hardening: accessibility sweep, UX polish, and render performance fixes.
-- Cloud tune-up: IaC review, least-privilege updates, and CI/CD speed-ups.
-</details>
-
----
-
-## Contact
-
-If you’re hiring or want to collaborate, email is best:
-
-- 📩 **Email:** FandaKalasek@icloud.com  
-- 🌐 **Portfolio:** https://topwnz.com
-
----
-
-<details>
-  <summary><b>GitHub stats</b></summary>
-
-  <p>
-    <img alt="GitHub Stats" width="495" height="195" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&cache_seconds=86400" loading="lazy" />
-    <br />
-    <img alt="Top Languages" width="300" height="120" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&cache_seconds=86400" loading="lazy" />
-  </p>
-</details>
-
----
-
-## Mini-game: README Runner (tap to jump)
-
-Click or tap inside the track to make the dino jump the cactus. Works in browsers that support inline SVG animations (Chrome, Edge, Firefox).
-
-<svg id="runner-game" viewBox="0 0 600 140" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mini dino runner game">
-  <rect width="600" height="140" fill="#0f172a" />
-  <rect y="110" width="600" height="4" fill="#38bdf8" />
-  <text x="20" y="30" fill="#e2e8f0" font-family="monospace" font-size="14">Click/tap to jump ▸ beat the cactus</text>
+<p align="center">
+<svg width="600" height="140" viewBox="0 0 600 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="140" rx="8" fill="#0f172a"/>
+  <rect y="110" width="600" height="2" fill="#38bdf8" fill-opacity="0.3"/>
+  
   <g>
-    <animateTransform attributeName="transform" type="translate" dur="0.6s" begin="runner-game.click" restart="always" keyTimes="0;0.35;0.7;1" values="0 0;0 -52;0 0;0 0" calcMode="spline" keySplines="0.33 0.0 0.67 1;0.33 0.0 0.67 1;0 0 1 1" />
-    <rect id="runner" x="70" y="70" width="28" height="32" rx="4" fill="#a3e635" />
-    <rect x="96" y="82" width="8" height="6" rx="1" fill="#1a2e05" />
-    <rect x="104" y="78" width="6" height="6" rx="1" fill="#1a2e05" />
+    <rect x="500" y="80" width="15" height="30" rx="2" fill="#f97316">
+      <animateTransform attributeName="transform" type="translate" from="100 0" to="-600 0" dur="3s" repeatCount="indefinite" />
+    </rect>
   </g>
-  <rect id="cactus" y="74" width="18" height="36" rx="2" fill="#f97316">
-    <animateTransform attributeName="transform" type="translate" dur="2.4s" values="560 0;-40 0" repeatCount="indefinite" />
-  </rect>
-  <rect x="0" y="114" width="600" height="10" fill="#e2e8f0" fill-opacity="0.3" />
+
+  <g>
+    <rect x="80" y="78" width="30" height="32" rx="4" fill="#a3e635">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -50; 0 0" keyTimes="0; 0.5; 1" dur="1.5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="100" y="85" width="4" height="4" fill="#0f172a">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -50; 0 0" keyTimes="0; 0.5; 1" dur="1.5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <text x="20" y="30" fill="#38bdf8" font-family="monospace" font-size="12">STATUS: DEPLOYING_WITHOUT_BUGS...</text>
 </svg>
+</p>
+
+---
+
+<p align="center">
+  <a href="https://topwnz.com"><b>Website</b></a> • 
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN"><b>LinkedIn</b></a> • 
+  <a href="mailto:FandaKalasek@icloud.com"><b>Contact Me</b></a>
+</p>
+
+<p align="center">
+  <sub>Last updated: 2026. Built with ☕ and F̶̩͉ͥͦ̂ͯͨ͛̅ͧ͡à͓̓͟k̨̛̪̲̖͊̔̃̃ͪͦͥi̢̅̃n̥̝͕̳̉̑̀ͣ̕ t̖̏ͯͨr̴͖̭̯̥̬̿̉̂͟ụ̫̣̌e̩̪̖̎ͨͪ̃ TopBot.PwnZ™ <kbd>TypeScript</kbd></sub>
+</p>
