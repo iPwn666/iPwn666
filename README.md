@@ -118,5 +118,5 @@ I bridge the gap between complex cloud infrastructure and seamless user experien
 </p>
 
 <p align="center">
-  <sub>Last updated: 2026. Built with ☕ and <kbd>TypeScript</kbd></sub>
+  <sub>Last updated: 2026. Built with ☕ and F̶̩͉ͥͦ̂ͯͨ͛̅ͧ͡à͓̓͟k̨̛̪̲̖͊̔̃̃ͪͦͥi̢̅̃n̥̝͕̳̉̑̀ͣ̕ t̖̏ͯͨr̴͖̭̯̥̬̿̉̂͟ụ̫̣̌e̩̪̖̎ͨͪ̃ TopBot.PwnZ™ <kbd>TypeScript</kbd></sub>
 </p>
