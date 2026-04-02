@@ -1,0 +1,7 @@
+{
+  "name": "ipwn666-profile",
+  "private": true,
+  "scripts": {
+    "refresh:profile": "node scripts/generate-profile-assets.mjs"
+  }
+}

@@ -1,122 +1,126 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=200&section=header&text=František%20Kalášek&fontSize=70&animation=fadeIn&fontAlignY=35" width="100%" />
+  <img src="./assets/hero.svg" alt="iPwn666 hero panel" width="100%" />
 </p>
 
 <p align="center">
-  <b>Full‑stack Engineer • Cloud/DevOps • PWA Architect</b>
+  <a href="https://topwnz.com">
+    <img src="https://img.shields.io/badge/site-topwnz.com-14b8a6?style=for-the-badge&labelColor=111827" alt="Website" />
+  </a>
+  <a href="mailto:FandaKalasek@icloud.com">
+    <img src="https://img.shields.io/badge/mail-FandaKalasek@icloud.com-f97316?style=for-the-badge&labelColor=111827" alt="Email" />
+  </a>
+  <a href="https://github.com/iPwn666/iPwn666/actions/workflows/refresh-profile.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/iPwn666/iPwn666/refresh-profile.yml?branch=main&style=for-the-badge&label=profile%20refresh&labelColor=111827&color=0f766e" alt="Profile refresh" />
+  </a>
 </p>
 
 <p align="center">
-  <a href="https://topwnz.com"><img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=react&logoColor=61DAFB" /></a>
-  <a href="mailto:FandaKalasek@icloud.com"><img src="https://img.shields.io/badge/Email-000?style=for-the-badge&logo=icloud&logoColor=fff" /></a>
-  <a href="https://github.com/iPwn666?tab=repositories"><img src="https://img.shields.io/badge/Repos-000?style=for-the-badge&logo=github&logoColor=fff" /></a>
+  <a href="#signal-board">Signal Board</a> /
+  <a href="#build-lanes">Build Lanes</a> /
+  <a href="#live-data-flow">Live Data Flow</a> /
+  <a href="#event-stream">Event Stream</a> /
+  <a href="#working-interface">Working Interface</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/PWA--first-0ea5e9?style=flat-square" />
-  <img src="https://img.shields.io/badge/Cloud--native-0ea5e9?style=flat-square" />
-  <img src="https://img.shields.io/badge/Security--by--design-0ea5e9?style=flat-square" />
+  <code>device tooling</code>
+  <code>iOS internals</code>
+  <code>NixOS ops</code>
+  <code>native automation</code>
+  <code>AI-assisted workflows</code>
 </p>
 
----
+## Signal Board
 
-## 🚀 Snapshot
+I build things that sit close to the machine: device tooling, operational automation, native experiments, and feedback-heavy interfaces. The profile below is no longer a static intro card; it now carries a small live telemetry layer sourced from the GitHub API and refreshed by Actions.
 
-I bridge the gap between complex cloud infrastructure and seamless user experiences. With a background in healthcare, I prioritize **empathy-driven UI** and **mission-critical reliability**.
+<p align="center">
+  <img src="./assets/live-board.svg" alt="Live signal board for iPwn666" width="100%" />
+</p>
 
-- ⚙️ **End‑to‑end delivery**: I don't just write code; I own the architecture and the uptime.
-- 🔒 **Security First**: Least-privilege access and secure defaults are my baseline, not an afterthought.
-- ⚡ **Performance Geek**: If it’s not under a 200ms TTFB, it’s not finished.
+## Build Lanes
 
----
+| Lane | What that means in practice |
+| --- | --- |
+| Device tooling | Scripts, helpers, and operator-grade flows that remove repetitive manual steps. |
+| iOS internals | Reverse-engineering-adjacent exploration, jailbreak ecosystem curiosity, and native debugging workflows. |
+| NixOS ops | Reproducible workstation setup, system automation, timers, audits, and controlled rollout habits. |
+| Native AI loops | Fast experiments where local tooling, LLMs, and UI feedback stay tightly connected. |
 
-## 🛠️ My Tech Stack
+## Live Data Flow
 
-| Category | Tools & Technologies |
-| :--- | :--- |
-| **Frontend** | `React` `Next.js` `TypeScript` `TailwindCSS` `PWA` |
-| **Backend** | `Node.js` `Go` `PostgreSQL` `Redis` `GraphQL` |
-| **Cloud/DevOps** | `AWS` `Docker` `Kubernetes` `Terraform` `GitHub Actions` |
-| **Monitoring** | `Prometheus` `Grafana` `Sentry` |
+```mermaid
+flowchart LR
+    A[GitHub public APIs] --> B[refresh-profile.yml]
+    B --> C[scripts/generate-profile-assets.mjs]
+    C --> D[assets/live-data.json]
+    C --> E[assets/hero.svg]
+    C --> F[assets/live-board.svg]
+    C --> G[assets/event-stream.svg]
+    D --> H[README.md]
+    E --> H
+    F --> H
+    G --> H
+```
 
----
+The generated snapshot that drives the panels above lives in [assets/live-data.json](./assets/live-data.json). The workflow polls every hour, runs on demand, and only commits when the underlying source signals actually change.
 
-## 📈 Engineering Impact
+## Event Stream
+
+<p align="center">
+  <img src="./assets/event-stream.svg" alt="Recent public GitHub event stream" width="100%" />
+</p>
+
+## Working Interface
 
 <details open>
-<summary><b>Current Engineering Focus</b></summary>
-<br />
+  <summary><strong>How I prefer to build</strong></summary>
 
-- **Edge Computing:** Implementing Next.js Middleware for global request shaping.
-- **Bundle Optimization:** Reducing TBT (Total Blocking Time) on mobile devices via code-splitting.
-- **Infrastructure:** Hardening K8s clusters with automated security scanning.
+  <br />
+
+  - Short loops beat heroic rewrites.
+  - Instrumentation comes before guesswork.
+  - Good tooling should remove friction, not just move it around.
+  - I like interfaces that feel alive: status, motion, progress, and meaningful signal density.
 </details>
 
----
+<details>
+  <summary><strong>Stack I reach for</strong></summary>
 
-## 📂 Featured Repositories
+  <br />
 
-<table>
-  <tr>
-    <td width="50%">
-      <b>🚀 Project Name A</b><br />
-      <i>Brief description of the impact/solution.</i><br />
-      <code>Next.js</code> <code>Terraform</code> <code>AWS</code>
-    </td>
-    <td width="50%">
-      <b>🔒 Project Name B</b><br />
-      <i>High-security auth implementation or PWA tool.</i><br />
-      <code>Node.js</code> <code>Docker</code> <code>Redis</code>
-    </td>
-  </tr>
-</table>
+  | Surface | Tools |
+  | --- | --- |
+  | Frontend | `React`, `Next.js`, `TypeScript`, `Expo`, `Tailwind CSS` |
+  | Native and systems | `Swift`, `Objective-C`, `Bash`, `Nix`, `Node.js` |
+  | Infra and delivery | `Docker`, `GitHub Actions`, `PostgreSQL`, `Redis`, `AWS` |
+  | Observability | logs, dashboards, tiny control panels, and scripts that tell the truth fast |
+</details>
 
----
+<details>
+  <summary><strong>What changed in this repo</strong></summary>
 
-## 📊 Interaction & Stats
+  <br />
 
-<p align="center">
-  <img align="left" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iPwn666&layout=compact&theme=tokyonight&hide_border=true" />
-  <img align="center" height="180em" src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&theme=tokyonight&hide_border=true" />
-</p>
+  - Replaced the generic README with a profile that better matches the actual work.
+  - Added generated SVG panels with live GitHub-derived telemetry.
+  - Added an hourly GitHub Actions refresh loop so the profile can keep moving without manual edits.
+</details>
 
----
-
-## 🎮 The "Zero-Downtime" Runner
-*A metaphor for my deployments: Always moving, never crashing.*
+## GitHub Pulse
 
 <p align="center">
-<svg width="600" height="140" viewBox="0 0 600 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="600" height="140" rx="8" fill="#0f172a"/>
-  <rect y="110" width="600" height="2" fill="#38bdf8" fill-opacity="0.3"/>
-  
-  <g>
-    <rect x="500" y="80" width="15" height="30" rx="2" fill="#f97316">
-      <animateTransform attributeName="transform" type="translate" from="100 0" to="-600 0" dur="3s" repeatCount="indefinite" />
-    </rect>
-  </g>
-
-  <g>
-    <rect x="80" y="78" width="30" height="32" rx="4" fill="#a3e635">
-      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -50; 0 0" keyTimes="0; 0.5; 1" dur="1.5s" repeatCount="indefinite" />
-    </rect>
-    <rect x="100" y="85" width="4" height="4" fill="#0f172a">
-      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -50; 0 0" keyTimes="0; 0.5; 1" dur="1.5s" repeatCount="indefinite" />
-    </rect>
-  </g>
-  
-  <text x="20" y="30" fill="#38bdf8" font-family="monospace" font-size="12">STATUS: DEPLOYING_WITHOUT_BUGS...</text>
-</svg>
-</p>
-
----
-
-<p align="center">
-  <a href="https://topwnz.com"><b>Website</b></a> • 
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN"><b>LinkedIn</b></a> • 
-  <a href="mailto:FandaKalasek@icloud.com"><b>Contact Me</b></a>
+  <img src="https://github-readme-stats.vercel.app/api?username=iPwn666&show_icons=true&hide_border=true&bg_color=00000000&title_color=0f766e&icon_color=f97316&text_color=334155&ring_color=0f766e" height="180" alt="GitHub stats" />
 </p>
 
 <p align="center">
-  <sub>Last updated: 2026. Built with ☕ and F̶̩͉ͥͦ̂ͯͨ͛̅ͧ͡à͓̓͟k̨̛̪̲̖͊̔̃̃ͪͦͥi̢̅̃n̥̝͕̳̉̑̀ͣ̕ t̖̏ͯͨr̴͖̭̯̥̬̿̉̂͟ụ̫̣̌e̩̪̖̎ͨͪ̃ TopBot.PwnZ™ <kbd>TypeScript</kbd></sub>
+  <a href="https://topwnz.com"><strong>topwnz.com</strong></a>
+  /
+  <a href="mailto:FandaKalasek@icloud.com"><strong>mail</strong></a>
+  /
+  <a href="https://github.com/iPwn666"><strong>github</strong></a>
+</p>
+
+<p align="center">
+  <sub>Profile assets are generated from live GitHub data, committed back into the repo, and rendered directly inside this README.</sub>
 </p>

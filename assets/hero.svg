@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">iPwn666 hero panel</title>
+  <desc id="desc">Animated profile banner with live profile summary.</desc>
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617" />
+      <stop offset="0.55" stop-color="#0f172a" />
+      <stop offset="1" stop-color="#13202f" />
+    </linearGradient>
+    <linearGradient id="heroAccent" x1="132" y1="84" x2="1120" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14b8a6" />
+      <stop offset="1" stop-color="#f97316" />
+    </linearGradient>
+    <pattern id="heroGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M 42 0 L 0 0 0 42" fill="none" stroke="rgba(148, 163, 184, 0.10)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" rx="32" fill="url(#heroBg)" />
+  <rect width="1280" height="640" rx="32" fill="url(#heroGrid)" />
+  <circle cx="1050" cy="130" r="220" fill="rgba(20, 184, 166, 0.16)" />
+  <circle cx="1170" cy="80" r="130" fill="rgba(249, 115, 22, 0.15)" />
+  <circle cx="114" cy="108" r="7" fill="#14b8a6">
+    <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
+  </circle>
+  <text x="132" y="113" fill="#99f6e4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24">LIVE PROFILE / 2 Apr 2026, 13:05</text>
+
+  <text x="132" y="214" fill="#f8fafc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="74" font-weight="700">František Kalášek</text>
+  <text x="132" y="266" fill="#14b8a6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">@iPwn666</text>
+  <text x="132" y="318" fill="#cbd5e1" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="28">Device tooling / iOS internals / NixOS ops / native AI loops</text>
+
+  <g transform="translate(132 486)">
+    <rect width="1016" height="94" rx="22" fill="rgba(15, 23, 42, 0.86)" stroke="rgba(148, 163, 184, 0.16)" />
+    <rect x="30" y="26" width="168" height="40" rx="20" fill="rgba(20, 184, 166, 0.14)" />
+    <text x="114" y="51" text-anchor="middle" fill="#ccfbf1" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">Javorek, Czechia</text>
+    <rect x="224" y="26" width="188" height="40" rx="20" fill="rgba(249, 115, 22, 0.14)" />
+    <text x="318" y="51" text-anchor="middle" fill="#ffedd5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">TopBot.PwnZ</text>
+    <rect x="438" y="26" width="178" height="40" rx="20" fill="rgba(56, 189, 248, 0.14)" />
+    <text x="527" y="51" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">1 public repo(s)</text>
+    <rect x="642" y="26" width="168" height="40" rx="20" fill="rgba(163, 230, 53, 0.14)" />
+    <text x="726" y="51" text-anchor="middle" fill="#ecfccb" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">0 follower(s)</text>
+    <rect x="836" y="26" width="150" height="40" rx="20" fill="rgba(148, 163, 184, 0.16)" />
+    <text x="911" y="51" text-anchor="middle" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">since 10 Feb 2026</text>
+  </g>
+
+  
+        <g transform="translate(64 408)">
+          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
+          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">device tooling</text>
+        </g>
+      
+        <g transform="translate(288 408)">
+          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
+          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">iOS internals</text>
+        </g>
+      
+        <g transform="translate(512 408)">
+          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
+          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">NixOS ops</text>
+        </g>
+      
+        <g transform="translate(736 408)">
+          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
+          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">native AI loops</text>
+        </g>
+      
+
+  <rect x="56" y="598" width="1168" height="4" rx="2" fill="rgba(20, 184, 166, 0.16)" />
+  <rect x="56" y="598" width="232" height="4" rx="2" fill="url(#heroAccent)">
+    <animate attributeName="x" values="56;1000;56" dur="8s" repeatCount="indefinite" />
+  </rect>
+</svg>
