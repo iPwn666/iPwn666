@@ -48,26 +48,26 @@
         <g transform="translate(446 312)">
           <rect width="352" height="94" rx="22" fill="#09111d" stroke="rgba(148, 163, 184, 0.15)" />
           <text x="24" y="32" fill="#8ab8d4" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">Last repo touch</text>
-          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">2 Apr 2026, 13:07</text>
+          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">2 Apr 2026, 13:28</text>
         </g>
       
         <g transform="translate(834 312)">
           <rect width="352" height="94" rx="22" fill="#09111d" stroke="rgba(148, 163, 184, 0.15)" />
           <text x="24" y="32" fill="#8ab8d4" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">Last signal</text>
-          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">2 Apr 2026, 13:06</text>
+          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">2 Apr 2026, 13:28</text>
         </g>
       
 
   <g transform="translate(780 188)">
     <rect width="418" height="244" rx="26" fill="#08111d" stroke="rgba(249, 115, 22, 0.18)" />
     <text x="28" y="40" fill="#fdba74" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">EVENT MIX</text>
-    <text x="28" y="72" fill="#fff7ed" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">2 recent public signal(s)</text>
+    <text x="28" y="72" fill="#fff7ed" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">3 recent public signal(s)</text>
     
         <g transform="translate(780 462)">
           <text x="0" y="16" fill="#a9bed2" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">PUSH</text>
           <rect x="92" y="2" width="250" height="18" rx="9" fill="rgba(148, 163, 184, 0.10)" />
-          <rect x="92" y="2" width="96" height="18" rx="9" fill="#14b8a6" />
-          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">2</text>
+          <rect x="92" y="2" width="130" height="18" rx="9" fill="#14b8a6" />
+          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">3</text>
         </g>
       
         <g transform="translate(780 416)">

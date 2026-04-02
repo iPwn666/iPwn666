@@ -52,7 +52,7 @@
     <text x="418" y="31" fill="#7dd3fc" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">CONTROL ROOM</text>
     <text x="418" y="58" fill="#eff6ff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24">https://ipwn666.github.io/iPwn666/</text>
     <text x="922" y="31" fill="#7dd3fc" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">LAST EVENT</text>
-    <text x="922" y="58" fill="#eff6ff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24">2 Apr 2026, 13:06</text>
+    <text x="922" y="58" fill="#eff6ff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24">2 Apr 2026, 13:28</text>
   </g>
 
   
@@ -80,7 +80,7 @@
   <g transform="translate(916 394)">
     <rect width="240" height="110" rx="28" fill="#07101c" stroke="rgba(249, 115, 22, 0.22)" />
     <text x="26" y="34" fill="#fdba74" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">MESH STATUS</text>
-    <text x="26" y="68" fill="#fff7ed" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">2 active signal(s)</text>
+    <text x="26" y="68" fill="#fff7ed" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">3 active signal(s)</text>
     <text x="26" y="92" fill="#d6deea" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="18">Hourly README refresh plus browser-live clock</text>
   </g>
 </svg>
