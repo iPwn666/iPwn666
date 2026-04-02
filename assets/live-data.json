@@ -11,16 +11,24 @@
   "following": 0,
   "memberSince": "10 Feb 2026, 13:47",
   "memberSinceShort": "10 Feb 2026",
-  "repoUpdatedAt": "2026-02-24T01:57:35Z",
-  "repoUpdatedAtDisplay": "24 Feb 2026, 02:57",
-  "lastEventAt": "no public events",
+  "repoUpdatedAt": "2026-04-02T11:06:01Z",
+  "repoUpdatedAtDisplay": "2 Apr 2026, 13:06",
+  "lastEventAt": "2 Apr 2026, 13:05",
   "focusTracks": [
     "device tooling",
     "iOS internals",
     "NixOS ops",
     "native AI loops"
   ],
-  "events": [],
-  "generatedAt": "2026-04-02T11:05:06.856Z",
-  "generatedAtPrague": "2 Apr 2026, 13:05"
+  "events": [
+    {
+      "kind": "push",
+      "accent": "#14b8a6",
+      "absolute": "2 Apr 2026, 13:05",
+      "summary": "Push on iPwn666/iPwn666",
+      "detail": "0 commit(s) on main"
+    }
+  ],
+  "generatedAt": "2026-04-02T11:06:02.805Z",
+  "generatedAtPrague": "2 Apr 2026, 13:06"
 }

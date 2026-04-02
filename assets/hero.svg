@@ -24,7 +24,7 @@
   <circle cx="114" cy="108" r="7" fill="#14b8a6">
     <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
   </circle>
-  <text x="132" y="113" fill="#99f6e4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24">LIVE PROFILE / 2 Apr 2026, 13:05</text>
+  <text x="132" y="113" fill="#99f6e4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24">LIVE PROFILE / 2 Apr 2026, 13:06</text>
 
   <text x="132" y="214" fill="#f8fafc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="74" font-weight="700">František Kalášek</text>
   <text x="132" y="266" fill="#14b8a6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">@iPwn666</text>
