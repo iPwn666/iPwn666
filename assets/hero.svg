@@ -1,73 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">iPwn666 hero panel</title>
-  <desc id="desc">Animated profile banner with live profile summary.</desc>
+  <title id="title">iPwn666 live profile hero</title>
+  <desc id="desc">Profile banner with live snapshot data and contact surface.</desc>
   <defs>
     <linearGradient id="heroBg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#020617" />
-      <stop offset="0.55" stop-color="#0f172a" />
-      <stop offset="1" stop-color="#13202f" />
+      <stop stop-color="#040816" />
+      <stop offset="0.52" stop-color="#0a1629" />
+      <stop offset="1" stop-color="#132337" />
     </linearGradient>
-    <linearGradient id="heroAccent" x1="132" y1="84" x2="1120" y2="520" gradientUnits="userSpaceOnUse">
+    <linearGradient id="heroStroke" x1="84" y1="84" x2="1186" y2="544" gradientUnits="userSpaceOnUse">
       <stop stop-color="#14b8a6" />
+      <stop offset="0.5" stop-color="#38bdf8" />
       <stop offset="1" stop-color="#f97316" />
     </linearGradient>
-    <pattern id="heroGrid" width="42" height="42" patternUnits="userSpaceOnUse">
-      <path d="M 42 0 L 0 0 0 42" fill="none" stroke="rgba(148, 163, 184, 0.10)" stroke-width="1" />
-    </pattern>
+    <radialGradient id="heroGlowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1024 148) rotate(149.631) scale(346.854 273.575)">
+      <stop stop-color="#14b8a6" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#14b8a6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="heroGlowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1214 98) rotate(145.305) scale(280.446 218.839)">
+      <stop stop-color="#f97316" stop-opacity="0.20" />
+      <stop offset="1" stop-color="#f97316" stop-opacity="0" />
+    </radialGradient>
   </defs>
 
-  <rect width="1280" height="640" rx="32" fill="url(#heroBg)" />
-  <rect width="1280" height="640" rx="32" fill="url(#heroGrid)" />
-  <circle cx="1050" cy="130" r="220" fill="rgba(20, 184, 166, 0.16)" />
-  <circle cx="1170" cy="80" r="130" fill="rgba(249, 115, 22, 0.15)" />
-  <circle cx="114" cy="108" r="7" fill="#14b8a6">
-    <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
-  </circle>
-  <text x="132" y="113" fill="#99f6e4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24">LIVE PROFILE / 2 Apr 2026, 13:07</text>
+  <rect width="1280" height="640" rx="34" fill="url(#heroBg)" />
+  <rect x="22" y="22" width="1236" height="596" rx="28" stroke="url(#heroStroke)" stroke-opacity="0.28" />
+  <rect x="48" y="48" width="1184" height="544" rx="26" fill="#050b16" fill-opacity="0.32" />
+  <ellipse cx="1024" cy="148" rx="312" ry="244" fill="url(#heroGlowA)" />
+  <ellipse cx="1214" cy="98" rx="228" ry="180" fill="url(#heroGlowB)" />
 
-  <text x="132" y="214" fill="#f8fafc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="74" font-weight="700">František Kalášek</text>
-  <text x="132" y="266" fill="#14b8a6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">@iPwn666</text>
-  <text x="132" y="318" fill="#cbd5e1" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="28">Device tooling / iOS internals / NixOS ops / native AI loops</text>
+  <g opacity="0.86">
+    <path d="M808 162C900 222 1012 236 1146 202" stroke="rgba(56, 189, 248, 0.28)" stroke-width="2" stroke-linecap="round" />
+    <path d="M774 216C910 286 1052 308 1188 272" stroke="rgba(20, 184, 166, 0.22)" stroke-width="2" stroke-linecap="round" />
+    <path d="M758 274C906 352 1064 378 1200 346" stroke="rgba(249, 115, 22, 0.18)" stroke-width="2" stroke-linecap="round" />
+  </g>
 
-  <g transform="translate(132 486)">
-    <rect width="1016" height="94" rx="22" fill="rgba(15, 23, 42, 0.86)" stroke="rgba(148, 163, 184, 0.16)" />
-    <rect x="30" y="26" width="168" height="40" rx="20" fill="rgba(20, 184, 166, 0.14)" />
-    <text x="114" y="51" text-anchor="middle" fill="#ccfbf1" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">Javorek, Czechia</text>
-    <rect x="224" y="26" width="188" height="40" rx="20" fill="rgba(249, 115, 22, 0.14)" />
-    <text x="318" y="51" text-anchor="middle" fill="#ffedd5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">TopBot.PwnZ</text>
-    <rect x="438" y="26" width="178" height="40" rx="20" fill="rgba(56, 189, 248, 0.14)" />
-    <text x="527" y="51" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">1 public repo(s)</text>
-    <rect x="642" y="26" width="168" height="40" rx="20" fill="rgba(163, 230, 53, 0.14)" />
-    <text x="726" y="51" text-anchor="middle" fill="#ecfccb" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">0 follower(s)</text>
-    <rect x="836" y="26" width="150" height="40" rx="20" fill="rgba(148, 163, 184, 0.16)" />
-    <text x="911" y="51" text-anchor="middle" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">since 10 Feb 2026</text>
+  <g transform="translate(78 82)">
+    <rect width="212" height="42" rx="21" fill="rgba(8, 14, 24, 0.82)" stroke="rgba(20, 184, 166, 0.28)" />
+    <circle cx="28" cy="21" r="7" fill="#14b8a6" />
+    <text x="48" y="27" fill="#d6fbf6" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="17">LIVE SNAPSHOT / 2 Apr 2026, 13:28</text>
+  </g>
+
+  <text x="78" y="208" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="88" font-weight="700">František Kalášek</text>
+  <text x="80" y="264" fill="#41dbc8" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="29">@iPwn666</text>
+  <text x="78" y="324" fill="#d2deef" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="30">Device tooling, jailbreak-adjacent exploration, NixOS ops, and live control surfaces.</text>
+
+  <g transform="translate(78 520)">
+    <rect width="1124" height="76" rx="22" fill="#08111d" stroke="rgba(148, 163, 184, 0.14)" />
+    <text x="34" y="31" fill="#7dd3fc" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">CONTACT</text>
+    <text x="34" y="58" fill="#eff6ff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24">FandaKalasek@icloud.com</text>
+    <text x="418" y="31" fill="#7dd3fc" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">CONTROL ROOM</text>
+    <text x="418" y="58" fill="#eff6ff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24">https://ipwn666.github.io/iPwn666/</text>
+    <text x="922" y="31" fill="#7dd3fc" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">LAST EVENT</text>
+    <text x="922" y="58" fill="#eff6ff" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24">2 Apr 2026, 13:06</text>
   </g>
 
   
-        <g transform="translate(64 408)">
-          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
-          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">device tooling</text>
+        <g transform="translate(78 438)">
+          <rect width="200" height="38" rx="19" fill="#09101b" stroke="rgba(45, 212, 191, 0.22)" />
+          <text x="100" y="24" text-anchor="middle" fill="#d5fbf5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">device tooling</text>
         </g>
       
-        <g transform="translate(288 408)">
-          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
-          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">iOS internals</text>
+        <g transform="translate(308 438)">
+          <rect width="200" height="38" rx="19" fill="#09101b" stroke="rgba(45, 212, 191, 0.22)" />
+          <text x="100" y="24" text-anchor="middle" fill="#d5fbf5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">iOS internals</text>
         </g>
       
-        <g transform="translate(512 408)">
-          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
-          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">NixOS ops</text>
+        <g transform="translate(538 438)">
+          <rect width="200" height="38" rx="19" fill="#09101b" stroke="rgba(45, 212, 191, 0.22)" />
+          <text x="100" y="24" text-anchor="middle" fill="#d5fbf5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">NixOS ops</text>
         </g>
       
-        <g transform="translate(736 408)">
-          <rect width="192" height="36" rx="18" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(45, 212, 191, 0.20)" />
-          <text x="96" y="23" text-anchor="middle" fill="#dbeafe" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">native AI loops</text>
+        <g transform="translate(768 438)">
+          <rect width="200" height="38" rx="19" fill="#09101b" stroke="rgba(45, 212, 191, 0.22)" />
+          <text x="100" y="24" text-anchor="middle" fill="#d5fbf5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">native AI loops</text>
         </g>
       
 
-  <rect x="56" y="598" width="1168" height="4" rx="2" fill="rgba(20, 184, 166, 0.16)" />
-  <rect x="56" y="598" width="232" height="4" rx="2" fill="url(#heroAccent)">
-    <animate attributeName="x" values="56;1000;56" dur="8s" repeatCount="indefinite" />
-  </rect>
+  <g transform="translate(916 394)">
+    <rect width="240" height="110" rx="28" fill="#07101c" stroke="rgba(249, 115, 22, 0.22)" />
+    <text x="26" y="34" fill="#fdba74" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">MESH STATUS</text>
+    <text x="26" y="68" fill="#fff7ed" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">2 active signal(s)</text>
+    <text x="26" y="92" fill="#d6deea" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="18">Hourly README refresh plus browser-live clock</text>
+  </g>
 </svg>

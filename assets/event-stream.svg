@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1280" height="340" viewBox="0 0 1280 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Recent event stream</title>
-  <desc id="desc">Recent public GitHub activity for the profile.</desc>
-  <rect width="1280" height="340" rx="30" fill="#020617" />
-  <rect x="48" y="34" width="1184" height="44" rx="22" fill="rgba(15, 23, 42, 0.86)" />
-  <text x="76" y="62" fill="#f8fafc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="28" font-weight="700">Recent Event Stream</text>
-  <text x="1198" y="62" text-anchor="end" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">2 Apr 2026, 13:07</text>
+  <desc id="desc">Recent public GitHub activity for iPwn666.</desc>
+  <rect width="1280" height="340" rx="32" fill="#050814" />
+  <text x="56" y="70" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Recent Event Stream</text>
+  <text x="1188" y="70" text-anchor="end" fill="#9eb2c7" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">2 Apr 2026, 13:28</text>
   
-            <g transform="translate(56 102)">
-              <rect width="1168" height="72" rx="18" fill="rgba(15, 23, 42, 0.80)" stroke="rgba(148, 163, 184, 0.13)" />
-              <circle cx="36" cy="36" r="8" fill="#14b8a6">
-                <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite" />
-              </circle>
-              <text x="64" y="31" fill="#f8fafc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
-              <text x="64" y="54" fill="#cbd5e1" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17">activity on main</text>
-              <text x="1048" y="43" text-anchor="end" fill="#99f6e4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">2 Apr 2026, 13:06</text>
+            <g transform="translate(56 104)">
+              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
+              <circle cx="36" cy="36" r="8" fill="#14b8a6" />
+              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
+              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">activity on main</text>
+              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">2 Apr 2026, 13:06</text>
             </g>
           
-            <g transform="translate(56 194)">
-              <rect width="1168" height="72" rx="18" fill="rgba(15, 23, 42, 0.80)" stroke="rgba(148, 163, 184, 0.13)" />
-              <circle cx="36" cy="36" r="8" fill="#14b8a6">
-                <animate attributeName="opacity" values="1;0.3;1" dur="1.5999999999999999s" repeatCount="indefinite" />
-              </circle>
-              <text x="64" y="31" fill="#f8fafc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
-              <text x="64" y="54" fill="#cbd5e1" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17">activity on main</text>
-              <text x="1048" y="43" text-anchor="end" fill="#99f6e4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">2 Apr 2026, 13:05</text>
+            <g transform="translate(56 196)">
+              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
+              <circle cx="36" cy="36" r="8" fill="#14b8a6" />
+              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
+              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">activity on main</text>
+              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">2 Apr 2026, 13:05</text>
             </g>
           
 </svg>

@@ -9,6 +9,9 @@
   <a href="mailto:FandaKalasek@icloud.com">
     <img src="https://img.shields.io/badge/mail-FandaKalasek@icloud.com-f97316?style=for-the-badge&labelColor=111827" alt="Email" />
   </a>
+  <a href="https://ipwn666.github.io/iPwn666/">
+    <img src="https://img.shields.io/badge/live-control%20room-38bdf8?style=for-the-badge&labelColor=111827" alt="Live control room" />
+  </a>
   <a href="https://github.com/iPwn666/iPwn666/actions/workflows/refresh-profile.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/iPwn666/iPwn666/refresh-profile.yml?branch=main&style=for-the-badge&label=profile%20refresh&labelColor=111827&color=0f766e" alt="Profile refresh" />
   </a>
@@ -18,6 +21,7 @@
   <a href="#signal-board">Signal Board</a> /
   <a href="#build-lanes">Build Lanes</a> /
   <a href="#live-data-flow">Live Data Flow</a> /
+  <a href="#live-control-room">Live Control Room</a> /
   <a href="#event-stream">Event Stream</a> /
   <a href="#working-interface">Working Interface</a>
 </p>
@@ -49,21 +53,21 @@ I build things that sit close to the machine: device tooling, operational automa
 
 ## Live Data Flow
 
-```mermaid
-flowchart LR
-    A[GitHub public APIs] --> B[refresh-profile.yml]
-    B --> C[scripts/generate-profile-assets.mjs]
-    C --> D[assets/live-data.json]
-    C --> E[assets/hero.svg]
-    C --> F[assets/live-board.svg]
-    C --> G[assets/event-stream.svg]
-    D --> H[README.md]
-    E --> H
-    F --> H
-    G --> H
-```
+<p align="center">
+  <a href="https://ipwn666.github.io/iPwn666/">
+    <img src="./assets/live-flow.svg" alt="Live data flow from GitHub APIs into the README and control room" width="100%" />
+  </a>
+</p>
 
-The generated snapshot that drives the panels above lives in [assets/live-data.json](./assets/live-data.json). The workflow polls every hour, runs on demand, and only commits when the underlying source signals actually change.
+The generated snapshot that drives the panels above lives in [assets/live-data.json](./assets/live-data.json). The README layer stays image-based, while the linked control room adds a browser-live Prague clock, camera motion, and a Three.js scene fed by the same snapshot data.
+
+## Live Control Room
+
+The profile README itself cannot execute inline JavaScript or Three.js, so the heavy interactive layer lives here instead:
+
+- [Open the live control room](https://ipwn666.github.io/iPwn666/)
+- [Source snapshot for the control room](./site/data/live-data.json)
+- [Primary contact](mailto:FandaKalasek@icloud.com)
 
 ## Event Stream
 
@@ -103,8 +107,9 @@ The generated snapshot that drives the panels above lives in [assets/live-data.j
   <br />
 
   - Replaced the generic README with a profile that better matches the actual work.
-  - Added generated SVG panels with live GitHub-derived telemetry.
-  - Added an hourly GitHub Actions refresh loop so the profile can keep moving without manual edits.
+  - Added generated SVG panels with live GitHub-derived telemetry and a real timestamped data-flow panel.
+  - Added a Three.js-powered control room published through GitHub Pages.
+  - Added an hourly GitHub Actions refresh loop so the snapshot keeps moving without manual edits.
 </details>
 
 ## GitHub Pulse
@@ -118,9 +123,11 @@ The generated snapshot that drives the panels above lives in [assets/live-data.j
   /
   <a href="mailto:FandaKalasek@icloud.com"><strong>mail</strong></a>
   /
+  <a href="https://ipwn666.github.io/iPwn666/"><strong>control room</strong></a>
+  /
   <a href="https://github.com/iPwn666"><strong>github</strong></a>
 </p>
 
 <p align="center">
-  <sub>Profile assets are generated from live GitHub data, committed back into the repo, and rendered directly inside this README.</sub>
+  <sub>Profile assets are generated from live GitHub data, committed back into the repo, and mirrored into a browser-interactive control room.</sub>
 </p>

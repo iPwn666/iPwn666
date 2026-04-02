@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iPwn666 // Live Control Room</title>
+    <meta
+      name="description"
+      content="Interactive control room for iPwn666 with live GitHub-driven telemetry and a Three.js signal mesh."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+
+    <main class="shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Live Control Room</div>
+          <h1>iPwn666 / Signal Mesh</h1>
+          <p class="lede">
+            A browser-side telemetry deck driven by the same snapshot that powers the GitHub profile
+            README, with a real Prague clock, 3D signal mesh, and recent public activity rendered as
+            a living surface.
+          </p>
+
+          <div class="cta-row">
+            <a class="cta cta-primary" href="mailto:FandaKalasek@icloud.com">Mail FandaKalasek@icloud.com</a>
+            <a class="cta" href="https://github.com/iPwn666">Open GitHub</a>
+            <a class="cta" href="https://topwnz.com">Visit topwnz.com</a>
+          </div>
+        </div>
+
+        <aside class="hero-status panel">
+          <div class="panel-label">Runtime status</div>
+          <div class="status-stack">
+            <div>
+              <div class="metric-label">Prague clock</div>
+              <div id="clock" class="metric-value">--:--:--</div>
+            </div>
+            <div>
+              <div class="metric-label">Last snapshot</div>
+              <div id="last-sync" class="metric-value metric-small">loading</div>
+            </div>
+            <div>
+              <div class="metric-label">Mesh mode</div>
+              <div id="mesh-mode" class="metric-value metric-small">Three.js signal orbit</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="metrics-grid">
+        <article class="panel stat-card">
+          <div class="panel-label">Display name</div>
+          <div id="display-name" class="stat-value">Frantisek Kalasek</div>
+        </article>
+        <article class="panel stat-card">
+          <div class="panel-label">Last public signal</div>
+          <div id="last-event" class="stat-value">loading</div>
+        </article>
+        <article class="panel stat-card">
+          <div class="panel-label">Repo touch</div>
+          <div id="last-repo-touch" class="stat-value">loading</div>
+        </article>
+        <article class="panel stat-card">
+          <div class="panel-label">Contact</div>
+          <div class="stat-value">FandaKalasek@icloud.com</div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-label">Focus tracks</div>
+          <div id="focus-tracks" class="chip-grid"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-label">Signal mix</div>
+          <div id="signal-mix" class="bar-stack"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-label">Recent public stream</div>
+          <div id="event-stream" class="event-stream"></div>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
