@@ -1,5 +1,3 @@
-import * as THREE from "./vendor/three.module.min.js";
-
 const COLOR_MAP = {
   push: "#14b8a6",
   pr: "#a3e635",
@@ -19,13 +17,26 @@ const lastRepoTouchEl = document.querySelector("#last-repo-touch");
 const clockEl = document.querySelector("#clock");
 const canvasEl = document.querySelector("#scene");
 const meshModeEl = document.querySelector("#mesh-mode");
+const meshToggleEl = document.querySelector("#mesh-toggle");
+const scenePanelEl = document.querySelector("#scene-panel");
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const isNarrowViewport = window.matchMedia("(max-width: 820px)");
 
 const uiState = {
   activeTrackIndex: 0,
   snapshot: null,
 };
 
+const sceneLoadState = {
+  requested: false,
+  ready: false,
+  failed: false,
+  observer: null,
+};
+
 let sceneState = null;
+let THREE_MODULE = null;
 
 function setClock() {
   clockEl.textContent = new Intl.DateTimeFormat("en-GB", {
@@ -136,7 +147,8 @@ function buildTrackMesh(snapshot) {
     return;
   }
 
-  clearGroup(sceneState.trackGroup);
+  const { THREE, trackGroup } = sceneState;
+  clearGroup(trackGroup);
 
   snapshot.focusTracks.forEach((track, index) => {
     const pivot = new THREE.Group();
@@ -153,7 +165,7 @@ function buildTrackMesh(snapshot) {
         metalness: 0.08,
       })
     );
-    node.position.set(3.25 + index * 0.1, 0, 0);
+    node.position.set(3.15 + index * 0.12, 0, 0);
 
     const beam = new THREE.Line(
       new THREE.BufferGeometry().setFromPoints([
@@ -163,13 +175,13 @@ function buildTrackMesh(snapshot) {
       new THREE.LineBasicMaterial({
         color: index === uiState.activeTrackIndex ? 0xf97316 : 0x38bdf8,
         transparent: true,
-        opacity: 0.42,
+        opacity: 0.44,
       })
     );
 
     pivot.add(beam, node);
     pivot.userData = { speed: 0.1 + index * 0.035 };
-    sceneState.trackGroup.add(pivot);
+    trackGroup.add(pivot);
   });
 }
 
@@ -178,12 +190,13 @@ function buildEventMesh(snapshot) {
     return;
   }
 
-  clearGroup(sceneState.eventGroup);
+  const { THREE, eventGroup } = sceneState;
+  clearGroup(eventGroup);
 
   snapshot.events.forEach((event, index) => {
     const pivot = new THREE.Group();
     pivot.rotation.y = (index / Math.max(snapshot.events.length, 1)) * Math.PI * 2;
-    pivot.rotation.z = 0.34 + index * 0.08;
+    pivot.rotation.z = 0.26 + index * 0.08;
 
     const node = new THREE.Mesh(
       new THREE.SphereGeometry(0.12 + Math.max(0, 0.05 - index * 0.01), 20, 20),
@@ -193,10 +206,10 @@ function buildEventMesh(snapshot) {
         opacity: 0.95,
       })
     );
-    node.position.set(4.75 + index * 0.18, 0, 0);
+    node.position.set(4.45 + index * 0.16, 0, 0);
     pivot.add(node);
     pivot.userData = { speed: 0.16 + index * 0.04 };
-    sceneState.eventGroup.add(pivot);
+    eventGroup.add(pivot);
   });
 }
 
@@ -209,22 +222,47 @@ function syncScene(snapshot) {
   buildEventMesh(snapshot);
 }
 
-function resize() {
+function updateMeshMode(text) {
+  meshModeEl.textContent = text;
+}
+
+function setMeshButton(visible, label = "Enable 3D mesh") {
+  meshToggleEl.textContent = label;
+  meshToggleEl.classList.toggle("is-hidden", !visible);
+  meshToggleEl.hidden = !visible;
+}
+
+function resizeScene() {
   if (!sceneState) {
     return;
   }
 
-  sceneState.camera.aspect = window.innerWidth / window.innerHeight;
+  const rect = canvasEl.getBoundingClientRect();
+  sceneState.camera.aspect = rect.width / rect.height;
   sceneState.camera.updateProjectionMatrix();
-  sceneState.renderer.setSize(window.innerWidth, window.innerHeight);
+  sceneState.renderer.setSize(rect.width, rect.height, false);
 }
 
-function bootScene() {
-  try {
-    const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x030712, 0.11);
+async function loadThreeModule() {
+  if (!THREE_MODULE) {
+    THREE_MODULE = await import("./vendor/three.module.min.js");
+  }
 
-    const camera = new THREE.PerspectiveCamera(46, window.innerWidth / window.innerHeight, 0.1, 100);
+  return THREE_MODULE;
+}
+
+async function bootScene() {
+  if (sceneState || sceneLoadState.failed) {
+    return;
+  }
+
+  try {
+    const THREE = await loadThreeModule();
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x030712, 0.105);
+
+    const rect = canvasEl.getBoundingClientRect();
+    const camera = new THREE.PerspectiveCamera(46, rect.width / rect.height, 0.1, 100);
     camera.position.set(0, 0, 12);
 
     const renderer = new THREE.WebGLRenderer({
@@ -233,11 +271,10 @@ function bootScene() {
       alpha: true,
     });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.8));
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(rect.width, rect.height, false);
     renderer.domElement.dataset.engine = "three.js r164";
-    meshModeEl.textContent = "Three.js signal orbit";
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.92);
     const rimLight = new THREE.PointLight(0x14b8a6, 8, 40, 2);
     rimLight.position.set(6, 4, 8);
     const warmLight = new THREE.PointLight(0xf97316, 7, 40, 2);
@@ -287,12 +324,12 @@ function bootScene() {
     rig.add(orbitRingB);
 
     const starGeometry = new THREE.BufferGeometry();
-    const starCount = 900;
+    const starCount = 640;
     const starPositions = new Float32Array(starCount * 3);
 
     for (let index = 0; index < starCount; index += 1) {
       const stride = index * 3;
-      const radius = 12 + Math.random() * 18;
+      const radius = 10 + Math.random() * 18;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(2 * Math.random() - 1);
       starPositions[stride] = radius * Math.sin(phi) * Math.cos(theta);
@@ -307,7 +344,7 @@ function bootScene() {
         color: 0xffffff,
         size: 0.03,
         transparent: true,
-        opacity: 0.58,
+        opacity: 0.52,
       })
     );
     scene.add(stars);
@@ -321,6 +358,7 @@ function bootScene() {
     const targetRotation = { x: 0, y: 0 };
 
     sceneState = {
+      THREE,
       scene,
       camera,
       renderer,
@@ -341,18 +379,25 @@ function bootScene() {
       syncScene(uiState.snapshot);
     }
 
-    window.addEventListener("pointermove", (event) => {
+    canvasEl.addEventListener("pointermove", (event) => {
       if (!sceneState) {
         return;
       }
 
-      sceneState.pointer.x = ((event.clientX / window.innerWidth) * 2 - 1) * 0.9;
-      sceneState.pointer.y = (1 - (event.clientY / window.innerHeight) * 2) * 0.7;
+      const rectForPointer = canvasEl.getBoundingClientRect();
+      sceneState.pointer.x =
+        ((event.clientX - rectForPointer.left) / rectForPointer.width) * 2 - 1;
+      sceneState.pointer.y =
+        1 - ((event.clientY - rectForPointer.top) / rectForPointer.height) * 2;
       sceneState.targetRotation.y = sceneState.pointer.x * 0.28;
       sceneState.targetRotation.x = sceneState.pointer.y * 0.18;
     });
 
-    window.addEventListener("resize", resize);
+    window.addEventListener("resize", resizeScene);
+
+    updateMeshMode("Three.js signal orbit");
+    setMeshButton(false);
+    sceneLoadState.ready = true;
 
     function animate(time) {
       if (!sceneState) {
@@ -365,36 +410,36 @@ function bootScene() {
       sceneState.rotation.y += (sceneState.targetRotation.y - sceneState.rotation.y) * 0.03;
 
       sceneState.rig.rotation.x = sceneState.rotation.x;
-      sceneState.rig.rotation.y = sceneState.rotation.y + seconds * 0.12;
-      sceneState.shell.rotation.y -= 0.005;
-      sceneState.shell.rotation.x += 0.0025;
+      sceneState.rig.rotation.y = sceneState.rotation.y + seconds * 0.11;
+      sceneState.shell.rotation.y -= 0.0048;
+      sceneState.shell.rotation.x += 0.0022;
       sceneState.innerCore.rotation.y += 0.012;
       sceneState.innerCore.rotation.x += 0.01;
-      sceneState.orbitRingA.rotation.z += 0.004;
-      sceneState.orbitRingB.rotation.z -= 0.003;
-      sceneState.stars.rotation.y += 0.0007;
+      sceneState.orbitRingA.rotation.z += 0.0032;
+      sceneState.orbitRingB.rotation.z -= 0.0028;
+      sceneState.stars.rotation.y += 0.0006;
 
       sceneState.trackGroup.children.forEach((pivot, index) => {
-        pivot.rotation.z += pivot.userData.speed * 0.0022;
+        pivot.rotation.z += pivot.userData.speed * 0.0021;
         const node = pivot.children[1];
         const scale =
           index === uiState.activeTrackIndex
-            ? 1.26
+            ? 1.22
             : 1 + Math.sin(seconds * 1.7 + index) * 0.08;
         node.scale.setScalar(scale);
       });
 
       sceneState.eventGroup.children.forEach((pivot, index) => {
-        pivot.rotation.x += pivot.userData.speed * 0.0028;
+        pivot.rotation.x += pivot.userData.speed * 0.0026;
         const node = pivot.children[0];
-        const scale = 0.95 + Math.sin(seconds * 2.8 + index) * 0.14;
+        const scale = 0.95 + Math.sin(seconds * 2.7 + index) * 0.14;
         node.scale.setScalar(scale);
       });
 
       sceneState.camera.position.x +=
-        ((sceneState.pointer.x * 0.7) - sceneState.camera.position.x) * 0.02;
+        ((sceneState.pointer.x * 0.6) - sceneState.camera.position.x) * 0.02;
       sceneState.camera.position.y +=
-        ((sceneState.pointer.y * 0.5) - sceneState.camera.position.y) * 0.02;
+        ((sceneState.pointer.y * 0.42) - sceneState.camera.position.y) * 0.02;
       sceneState.camera.lookAt(0, 0, 0);
 
       sceneState.renderer.render(sceneState.scene, sceneState.camera);
@@ -403,12 +448,77 @@ function bootScene() {
 
     requestAnimationFrame(animate);
   } catch (error) {
+    sceneLoadState.failed = true;
     canvasEl.dataset.engine = "three.js unavailable";
-    meshModeEl.textContent = "Renderer fallback / telemetry live";
-    lastSyncEl.textContent = lastSyncEl.textContent === "loading"
-      ? "snapshot ready / renderer fallback"
-      : lastSyncEl.textContent;
+    updateMeshMode("Renderer fallback / telemetry live");
+    setMeshButton(false);
     console.warn("Three.js scene fallback active:", error);
+  }
+}
+
+function requestSceneBoot({ immediate = false } = {}) {
+  if (sceneLoadState.requested || sceneLoadState.failed || prefersReducedMotion.matches) {
+    return;
+  }
+
+  sceneLoadState.requested = true;
+  updateMeshMode(immediate ? "Loading 3D mesh..." : "Queued for idle load");
+
+  const launch = () => {
+    bootScene();
+  };
+
+  if (immediate) {
+    launch();
+    return;
+  }
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(launch, { timeout: 2200 });
+  } else {
+    window.setTimeout(launch, 700);
+  }
+}
+
+function setupSceneLoading() {
+  if (prefersReducedMotion.matches) {
+    updateMeshMode("Reduced motion / telemetry live");
+    setMeshButton(false);
+    return;
+  }
+
+  if (isNarrowViewport.matches) {
+    updateMeshMode("Tap to enable 3D mesh");
+    setMeshButton(true, "Enable 3D mesh");
+    meshToggleEl.addEventListener(
+      "click",
+      () => {
+        setMeshButton(false);
+        requestSceneBoot({ immediate: true });
+      },
+      { once: true }
+    );
+    return;
+  }
+
+  setMeshButton(false);
+
+  if ("IntersectionObserver" in window) {
+    sceneLoadState.observer = new IntersectionObserver(
+      (entries) => {
+        const isVisible = entries.some((entry) => entry.isIntersecting);
+        if (!isVisible) {
+          return;
+        }
+
+        sceneLoadState.observer.disconnect();
+        requestSceneBoot();
+      },
+      { rootMargin: "150px 0px" }
+    );
+    sceneLoadState.observer.observe(scenePanelEl);
+  } else {
+    requestSceneBoot();
   }
 }
 
@@ -430,7 +540,7 @@ async function loadSnapshot() {
 }
 
 setClock();
-bootScene();
 loadSnapshot();
+setupSceneLoading();
 setInterval(setClock, 1000);
 setInterval(loadSnapshot, 60_000);

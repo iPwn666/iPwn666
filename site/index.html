@@ -6,7 +6,7 @@
     <title>iPwn666 // Live Control Room</title>
     <meta
       name="description"
-      content="Interactive control room for iPwn666 with live GitHub-driven telemetry and a Three.js signal mesh."
+      content="Interactive control room for iPwn666 with live GitHub-driven telemetry, lazy-loaded 3D visuals, and a cleaner signal-first UI."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,48 +17,66 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <canvas id="scene" aria-hidden="true"></canvas>
     <div class="aurora aurora-a"></div>
     <div class="aurora aurora-b"></div>
 
     <main class="shell">
-      <section class="hero">
-        <div class="hero-copy">
+      <header class="hero-grid">
+        <section class="panel hero-copy">
           <div class="eyebrow">Live Control Room</div>
           <h1>iPwn666 / Signal Mesh</h1>
           <p class="lede">
-            A browser-side telemetry deck driven by the same snapshot that powers the GitHub profile
-            README, with a real Prague clock, 3D signal mesh, and recent public activity rendered as
-            a living surface.
+            A telemetry-first control room driven by the same snapshot as the GitHub profile README.
+            The data appears immediately; the heavier 3D layer is lazy-loaded only after the page is
+            stable and the visual stage is in view.
           </p>
+
+          <div class="hero-pills">
+            <span class="hero-pill">Prague-synced runtime</span>
+            <span class="hero-pill">Snapshot-first loading</span>
+            <span class="hero-pill">Motion on demand</span>
+          </div>
 
           <div class="cta-row">
             <a class="cta cta-primary" href="mailto:FandaKalasek@icloud.com">Mail FandaKalasek@icloud.com</a>
             <a class="cta" href="https://github.com/iPwn666">Open GitHub</a>
             <a class="cta" href="https://topwnz.com">Visit topwnz.com</a>
           </div>
-        </div>
+        </section>
 
-        <aside class="hero-status panel">
-          <div class="panel-label">Runtime status</div>
-          <div class="status-stack">
-            <div>
-              <div class="metric-label">Prague clock</div>
-              <div id="clock" class="metric-value">--:--:--</div>
-            </div>
-            <div>
-              <div class="metric-label">Last snapshot</div>
-              <div id="last-sync" class="metric-value metric-small">loading</div>
-            </div>
-            <div>
-              <div class="metric-label">Mesh mode</div>
-              <div id="mesh-mode" class="metric-value metric-small">Three.js signal orbit</div>
+        <section class="panel scene-panel" id="scene-panel">
+          <div class="scene-stage">
+            <canvas id="scene" aria-hidden="true"></canvas>
+
+            <div class="scene-overlay">
+              <div class="scene-kicker">Lazy-loaded visual layer</div>
+              <h2 class="scene-title">Telemetry first, mesh second</h2>
+              <p class="scene-copy">
+                Snapshot cards render immediately. The Three.js mesh starts only after idle time and
+                viewport visibility, or on demand on smaller devices.
+              </p>
+              <button id="mesh-toggle" class="cta cta-ghost" type="button">Enable 3D mesh</button>
             </div>
           </div>
-        </aside>
-      </section>
 
-      <section class="metrics-grid">
+          <div class="scene-status-grid">
+            <article class="status-card">
+              <div class="metric-label">Prague clock</div>
+              <div id="clock" class="metric-value">--:--:--</div>
+            </article>
+            <article class="status-card">
+              <div class="metric-label">Last snapshot</div>
+              <div id="last-sync" class="metric-value metric-small">loading</div>
+            </article>
+            <article class="status-card status-card-wide">
+              <div class="metric-label">Mesh mode</div>
+              <div id="mesh-mode" class="metric-value metric-small">Preparing lazy scene</div>
+            </article>
+          </div>
+        </section>
+      </header>
+
+      <section class="stats-grid">
         <article class="panel stat-card">
           <div class="panel-label">Display name</div>
           <div id="display-name" class="stat-value">Frantisek Kalasek</div>
@@ -72,23 +90,23 @@
           <div id="last-repo-touch" class="stat-value">loading</div>
         </article>
         <article class="panel stat-card">
-          <div class="panel-label">Contact</div>
+          <div class="panel-label">Primary contact</div>
           <div class="stat-value">FandaKalasek@icloud.com</div>
         </article>
       </section>
 
-      <section class="content-grid">
-        <article class="panel">
+      <section class="dashboard-grid">
+        <article class="panel dashboard-card">
           <div class="panel-label">Focus tracks</div>
           <div id="focus-tracks" class="chip-grid"></div>
         </article>
 
-        <article class="panel">
+        <article class="panel dashboard-card">
           <div class="panel-label">Signal mix</div>
           <div id="signal-mix" class="bar-stack"></div>
         </article>
 
-        <article class="panel wide-panel">
+        <article class="panel timeline-card">
           <div class="panel-label">Recent public stream</div>
           <div id="event-stream" class="event-stream"></div>
         </article>
