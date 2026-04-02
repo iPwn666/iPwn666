@@ -81,9 +81,13 @@ function summarizeEvent(event) {
         accent: "#14b8a6",
         absolute,
         summary: `Push on ${repoName}`,
-        detail: branch
-          ? `${commits.length} commit(s) on ${branch}`
-          : `${commits.length} commit(s) published`,
+        detail: commits.length > 0
+          ? branch
+            ? `${commits.length} commit(s) on ${branch}`
+            : `${commits.length} commit(s) published`
+          : branch
+            ? `activity on ${branch}`
+            : "repository activity published",
       };
     case "CreateEvent":
       return {
