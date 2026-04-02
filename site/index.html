@@ -6,41 +6,65 @@
     <title>iPwn666 // Live Control Room</title>
     <meta
       name="description"
-      content="Interactive control room for iPwn666 with live GitHub-driven telemetry, lazy-loaded 3D visuals, and a cleaner signal-first UI."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
+      content="Interactive control room for iPwn666 with live GitHub-driven telemetry, lazy-loaded 3D visuals, and an iOS-native inspired interface."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="aurora aurora-a"></div>
-    <div class="aurora aurora-b"></div>
+    <div class="backdrop backdrop-a"></div>
+    <div class="backdrop backdrop-b"></div>
+    <div class="backdrop backdrop-c"></div>
 
     <main class="shell">
+      <div class="topbar">
+        <div class="island">
+          <span class="island-dot"></span>
+          <span>Live Control Room</span>
+          <span class="island-separator"></span>
+          <span id="live-pill">Snapshot syncing</span>
+        </div>
+        <a class="topbar-link" href="mailto:FandaKalasek@icloud.com">FandaKalasek@icloud.com</a>
+      </div>
+
       <header class="hero-grid">
         <section class="panel hero-copy">
-          <div class="eyebrow">Live Control Room</div>
-          <h1>iPwn666 / Signal Mesh</h1>
+          <div class="eyebrow">iOS-native pass</div>
+          <h1>
+            <span class="hero-name">iPwn666</span>
+            <span class="hero-divider">/</span>
+            <span class="hero-product">Signal Mesh</span>
+          </h1>
           <p class="lede">
-            A telemetry-first control room driven by the same snapshot as the GitHub profile README.
-            The data appears immediately; the heavier 3D layer is lazy-loaded only after the page is
-            stable and the visual stage is in view.
+            A softer, more native-feeling control room built around live GitHub telemetry. Content
+            appears immediately, the interface breathes more, and the heavier visual layer wakes up
+            only when it is actually useful.
           </p>
 
           <div class="hero-pills">
             <span class="hero-pill">Prague-synced runtime</span>
-            <span class="hero-pill">Snapshot-first loading</span>
-            <span class="hero-pill">Motion on demand</span>
+            <span class="hero-pill">On-demand scene loading</span>
+            <span class="hero-pill">Readable widget spacing</span>
           </div>
 
           <div class="cta-row">
             <a class="cta cta-primary" href="mailto:FandaKalasek@icloud.com">Mail FandaKalasek@icloud.com</a>
             <a class="cta" href="https://github.com/iPwn666">Open GitHub</a>
             <a class="cta" href="https://topwnz.com">Visit topwnz.com</a>
+          </div>
+
+          <div class="hero-notes">
+            <div class="hero-note">
+              <span class="note-label">Primary contact</span>
+              <span class="note-value">FandaKalasek@icloud.com</span>
+            </div>
+            <div class="hero-note">
+              <span class="note-label">Rendering model</span>
+              <span class="note-value">Live data first, 3D second</span>
+            </div>
+            <div class="hero-note">
+              <span class="note-label">Primary site</span>
+              <span class="note-value">topwnz.com</span>
+            </div>
           </div>
         </section>
 
@@ -49,13 +73,14 @@
             <canvas id="scene" aria-hidden="true"></canvas>
 
             <div class="scene-overlay">
-              <div class="scene-kicker">Lazy-loaded visual layer</div>
-              <h2 class="scene-title">Telemetry first, mesh second</h2>
+              <div class="scene-kicker">Ambient visual layer</div>
+              <h2 class="scene-title">Calmer surface, faster read</h2>
               <p class="scene-copy">
-                Snapshot cards render immediately. The Three.js mesh starts only after idle time and
-                viewport visibility, or on demand on smaller devices.
+                The visual mesh stays secondary. Snapshot cards and signals stay legible even before
+                the scene comes online, which makes the UI feel closer to a native dashboard than a
+                heavy web demo.
               </p>
-              <button id="mesh-toggle" class="cta cta-ghost" type="button">Enable 3D mesh</button>
+              <button id="mesh-toggle" class="cta cta-secondary" type="button">Enable ambient scene</button>
             </div>
           </div>
 
@@ -68,40 +93,59 @@
               <div class="metric-label">Last snapshot</div>
               <div id="last-sync" class="metric-value metric-small">loading</div>
             </article>
-            <article class="status-card status-card-wide">
-              <div class="metric-label">Mesh mode</div>
+            <article class="status-card">
+              <div class="metric-label">Scene mode</div>
               <div id="mesh-mode" class="metric-value metric-small">Preparing lazy scene</div>
             </article>
           </div>
         </section>
       </header>
 
-      <section class="stats-grid">
-        <article class="panel stat-card">
-          <div class="panel-label">Display name</div>
-          <div id="display-name" class="stat-value">Frantisek Kalasek</div>
+      <section class="widget-grid">
+        <article class="panel identity-card">
+          <div class="panel-label">Identity</div>
+          <div class="identity-grid">
+            <div class="identity-item">
+              <span class="identity-label">Display name</span>
+              <div id="display-name" class="identity-value">Frantisek Kalasek</div>
+            </div>
+            <div class="identity-item">
+              <span class="identity-label">Company</span>
+              <div id="company" class="identity-value">TopBot.PwnZ</div>
+            </div>
+            <div class="identity-item">
+              <span class="identity-label">Location</span>
+              <div id="location" class="identity-value">Javorek, Czechia</div>
+            </div>
+            <div class="identity-item">
+              <span class="identity-label">Primary contact</span>
+              <div class="identity-value">FandaKalasek@icloud.com</div>
+            </div>
+            <div class="identity-item">
+              <span class="identity-label">Public repos</span>
+              <div id="public-repos" class="identity-value">1</div>
+            </div>
+            <div class="identity-item">
+              <span class="identity-label">Member since</span>
+              <div id="member-since" class="identity-value">loading</div>
+            </div>
+            <div class="identity-item">
+              <span class="identity-label">Last public signal</span>
+              <div id="last-event" class="identity-value">loading</div>
+            </div>
+            <div class="identity-item">
+              <span class="identity-label">Repo touch</span>
+              <div id="last-repo-touch" class="identity-value">loading</div>
+            </div>
+          </div>
         </article>
-        <article class="panel stat-card">
-          <div class="panel-label">Last public signal</div>
-          <div id="last-event" class="stat-value">loading</div>
-        </article>
-        <article class="panel stat-card">
-          <div class="panel-label">Repo touch</div>
-          <div id="last-repo-touch" class="stat-value">loading</div>
-        </article>
-        <article class="panel stat-card">
-          <div class="panel-label">Primary contact</div>
-          <div class="stat-value">FandaKalasek@icloud.com</div>
-        </article>
-      </section>
 
-      <section class="dashboard-grid">
-        <article class="panel dashboard-card">
+        <article class="panel focus-card">
           <div class="panel-label">Focus tracks</div>
           <div id="focus-tracks" class="chip-grid"></div>
         </article>
 
-        <article class="panel dashboard-card">
+        <article class="panel signal-card">
           <div class="panel-label">Signal mix</div>
           <div id="signal-mix" class="bar-stack"></div>
         </article>

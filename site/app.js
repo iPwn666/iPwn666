@@ -11,6 +11,10 @@ const focusTracksEl = document.querySelector("#focus-tracks");
 const signalMixEl = document.querySelector("#signal-mix");
 const eventStreamEl = document.querySelector("#event-stream");
 const displayNameEl = document.querySelector("#display-name");
+const companyEl = document.querySelector("#company");
+const locationEl = document.querySelector("#location");
+const publicReposEl = document.querySelector("#public-repos");
+const memberSinceEl = document.querySelector("#member-since");
 const lastSyncEl = document.querySelector("#last-sync");
 const lastEventEl = document.querySelector("#last-event");
 const lastRepoTouchEl = document.querySelector("#last-repo-touch");
@@ -19,6 +23,7 @@ const canvasEl = document.querySelector("#scene");
 const meshModeEl = document.querySelector("#mesh-mode");
 const meshToggleEl = document.querySelector("#mesh-toggle");
 const scenePanelEl = document.querySelector("#scene-panel");
+const livePillEl = document.querySelector("#live-pill");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const isNarrowViewport = window.matchMedia("(max-width: 820px)");
@@ -106,9 +111,14 @@ function renderEvents(snapshot) {
 
 function renderSnapshot(snapshot) {
   displayNameEl.textContent = snapshot.displayName;
+  companyEl.textContent = snapshot.company || "Independent";
+  locationEl.textContent = snapshot.location || "Remote";
+  publicReposEl.textContent = String(snapshot.publicRepos ?? 0);
+  memberSinceEl.textContent = snapshot.memberSinceShort || snapshot.memberSince || "now";
   lastSyncEl.textContent = snapshot.generatedAtPrague;
   lastEventEl.textContent = snapshot.lastEventAt;
   lastRepoTouchEl.textContent = snapshot.repoUpdatedAtDisplay;
+  livePillEl.textContent = `${snapshot.events.length} live signals`;
   renderFocusTracks(snapshot);
   renderSignalMix(snapshot);
   renderEvents(snapshot);
@@ -395,7 +405,7 @@ async function bootScene() {
 
     window.addEventListener("resize", resizeScene);
 
-    updateMeshMode("Three.js signal orbit");
+    updateMeshMode("Ambient scene active");
     setMeshButton(false);
     sceneLoadState.ready = true;
 
@@ -450,7 +460,7 @@ async function bootScene() {
   } catch (error) {
     sceneLoadState.failed = true;
     canvasEl.dataset.engine = "three.js unavailable";
-    updateMeshMode("Renderer fallback / telemetry live");
+    updateMeshMode("Static glass / live telemetry");
     setMeshButton(false);
     console.warn("Three.js scene fallback active:", error);
   }
@@ -462,7 +472,7 @@ function requestSceneBoot({ immediate = false } = {}) {
   }
 
   sceneLoadState.requested = true;
-  updateMeshMode(immediate ? "Loading 3D mesh..." : "Queued for idle load");
+  updateMeshMode(immediate ? "Loading ambient scene..." : "Auto-loading ambient scene");
 
   const launch = () => {
     bootScene();
@@ -482,14 +492,14 @@ function requestSceneBoot({ immediate = false } = {}) {
 
 function setupSceneLoading() {
   if (prefersReducedMotion.matches) {
-    updateMeshMode("Reduced motion / telemetry live");
+    updateMeshMode("Reduced motion / live telemetry");
     setMeshButton(false);
     return;
   }
 
   if (isNarrowViewport.matches) {
-    updateMeshMode("Tap to enable 3D mesh");
-    setMeshButton(true, "Enable 3D mesh");
+    updateMeshMode("Tap to enable ambient scene");
+    setMeshButton(true, "Enable ambient scene");
     meshToggleEl.addEventListener(
       "click",
       () => {
@@ -535,6 +545,7 @@ async function loadSnapshot() {
     syncScene(snapshot);
   } catch (error) {
     lastSyncEl.textContent = "snapshot unavailable";
+    livePillEl.textContent = "Offline snapshot";
     eventStreamEl.innerHTML = `<article class="event-card"><div class="event-title">Snapshot unavailable</div><div class="event-detail">${error.message}</div></article>`;
   }
 }
