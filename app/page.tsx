@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Services } from "@/components/services";
 import { TechStack } from "@/components/tech-stack";
+import { LivePreview } from "@/components/live-preview";
 import { BusinessInfo } from "@/components/business-info";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Services />
       <TechStack />
+      <LivePreview />
       <BusinessInfo />
       <Contact />
       <Footer />
