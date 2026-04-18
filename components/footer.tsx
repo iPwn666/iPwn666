@@ -2,6 +2,7 @@
 
 import { Logo } from "./logo";
 import { Github, Globe, Mail } from "lucide-react";
+import { siteConfig } from "@/lib/data";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,14 +14,14 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <Logo size="small" />
             <div>
-              <p className="font-semibold text-foreground">Frantisek Kalasek</p>
-              <p className="text-sm text-muted">TopBot PwnZ&trade;</p>
+              <p className="font-semibold text-foreground">{siteConfig.name}</p>
+              <p className="text-sm text-muted">{siteConfig.brand}&trade;</p>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/iPwn666"
+              href={siteConfig.social.github.url}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-card transition-colors"
@@ -29,7 +30,7 @@ export function Footer() {
               <Github className="w-5 h-5 text-muted hover:text-foreground transition-colors" />
             </a>
             <a
-              href="https://topwnz.com"
+              href={siteConfig.social.website.url}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-card transition-colors"
@@ -38,7 +39,7 @@ export function Footer() {
               <Globe className="w-5 h-5 text-muted hover:text-foreground transition-colors" />
             </a>
             <a
-              href="mailto:FandaKalasek@icloud.com"
+              href={`mailto:${siteConfig.contact.email}`}
               className="p-2 rounded-lg hover:bg-card transition-colors"
               aria-label="Email"
             >
@@ -48,8 +49,8 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted">
-          <p>&copy; {currentYear} Frantisek Kalasek. All rights reserved.</p>
-          <p>ICO: 23628588 | Czech Republic</p>
+          <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
+          <p>ICO: {siteConfig.business.ico} | {siteConfig.location.country}</p>
         </div>
       </div>
     </footer>

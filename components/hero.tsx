@@ -2,6 +2,7 @@
 
 import { LogoWithText } from "./logo";
 import { Mail, Phone, MapPin, Github, Globe } from "lucide-react";
+import { siteConfig } from "@/lib/data";
 
 export function Hero() {
   return (
@@ -17,35 +18,35 @@ export function Hero() {
         <LogoWithText />
         
         <p className="text-xl md:text-2xl italic text-muted-foreground mt-4">
-          &ldquo;Bridge the gap, create the world.&rdquo;
+          &ldquo;{siteConfig.tagline}&rdquo;
         </p>
         
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
           <a
-            href="tel:+420722426195"
+            href={`tel:${siteConfig.contact.phoneRaw}`}
             className="flex items-center gap-2 px-6 py-3 rounded-full gradient-border bg-card card-hover text-foreground"
           >
             <Phone className="w-5 h-5 text-primary" />
-            <span>+420 722 426 195</span>
+            <span>{siteConfig.contact.phone}</span>
           </a>
           
           <a
-            href="mailto:FandaKalasek@icloud.com"
+            href={`mailto:${siteConfig.contact.email}`}
             className="flex items-center gap-2 px-6 py-3 rounded-full gradient-border bg-card card-hover text-foreground"
           >
             <Mail className="w-5 h-5 text-secondary" />
-            <span>FandaKalasek@icloud.com</span>
+            <span>{siteConfig.contact.email}</span>
           </a>
         </div>
         
         <div className="flex items-center gap-2 text-muted">
           <MapPin className="w-5 h-5 text-accent" />
-          <span>Javorek 54, 59203 Javorek, Czechia</span>
+          <span>{siteConfig.location.displayFull}</span>
         </div>
         
         <div className="flex items-center gap-4 mt-4">
           <a
-            href="https://github.com/iPwn666"
+            href={siteConfig.social.github.url}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-card gradient-border card-hover"
@@ -54,7 +55,7 @@ export function Hero() {
             <Github className="w-6 h-6 text-foreground" />
           </a>
           <a
-            href="https://topwnz.com"
+            href={siteConfig.social.website.url}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-card gradient-border card-hover"

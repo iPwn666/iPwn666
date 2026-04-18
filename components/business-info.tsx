@@ -1,34 +1,15 @@
 "use client";
 
 import { Building2, FileText, Calendar, MapPin, Hash } from "lucide-react";
+import { businessDetails, siteConfig } from "@/lib/data";
 
-const businessDetails = [
-  {
-    icon: Hash,
-    label: "ICO (Business ID)",
-    value: "23628588",
-  },
-  {
-    icon: Building2,
-    label: "Legal Form",
-    value: "Self-employed Individual (OSVČ)",
-  },
-  {
-    icon: Calendar,
-    label: "Established",
-    value: "August 21, 2025",
-  },
-  {
-    icon: MapPin,
-    label: "Registered Address",
-    value: "Dankovice 9, 592 03, Czech Republic",
-  },
-  {
-    icon: FileText,
-    label: "Registration",
-    value: "Ministry of Industry and Trade (MPO)",
-  },
-];
+const iconMap = {
+  ico: Hash,
+  legal: Building2,
+  established: Calendar,
+  address: MapPin,
+  registration: FileText,
+} as const;
 
 export function BusinessInfo() {
   return (
@@ -39,26 +20,29 @@ export function BusinessInfo() {
             Business Information
           </h2>
           <p className="text-lg text-muted">
-            Official registration details for Czech Republic
+            Official registration details for {siteConfig.location.country}
           </p>
         </div>
 
         <div className="p-8 rounded-2xl bg-card gradient-border">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {businessDetails.map((detail) => (
-              <div
-                key={detail.label}
-                className="flex items-start gap-4 p-4 rounded-xl bg-background/50"
-              >
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <detail.icon className="w-5 h-5 text-primary" />
+            {businessDetails.map((detail) => {
+              const Icon = iconMap[detail.id as keyof typeof iconMap] || Hash;
+              return (
+                <div
+                  key={detail.id}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-background/50"
+                >
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted mb-1">{detail.label}</p>
+                    <p className="font-semibold text-foreground">{detail.value}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-muted mb-1">{detail.label}</p>
-                  <p className="font-semibold text-foreground">{detail.value}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-8 p-4 rounded-xl bg-secondary/5 border border-secondary/20">

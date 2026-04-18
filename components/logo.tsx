@@ -1,5 +1,7 @@
 "use client";
 
+import { siteConfig } from "@/lib/data";
+
 export function Logo({ className = "", size = "default" }: { className?: string; size?: "small" | "default" | "large" }) {
   const sizes = {
     small: { width: 60, height: 60, fontSize: "text-xl" },
@@ -46,11 +48,11 @@ export function LogoWithText({ className = "" }: { className?: string }) {
     <div className={`flex flex-col items-center gap-6 ${className}`}>
       <Logo size="large" />
       <div className="text-center">
-        <h1 className="text-3xl md:text-4xl font-light tracking-[0.3em] text-foreground">
-          FRANTISEK KALASEK
+        <h1 className="text-3xl md:text-4xl font-light tracking-[0.3em] text-foreground uppercase">
+          {siteConfig.name.replace(" ", " ")}
         </h1>
         <p className="text-lg md:text-xl text-muted mt-2 tracking-widest">
-          TopBot PwnZ&trade;
+          {siteConfig.brand}&trade;
         </p>
       </div>
     </div>

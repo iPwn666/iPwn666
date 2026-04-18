@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { siteConfig } from "@/lib/data";
 
 export const revalidate = 300; // Revalidate every 5 minutes
 
@@ -35,21 +36,21 @@ interface GitHubRepo {
 
 export async function GET() {
   try {
-    const username = "iPwn666";
+    const username = siteConfig.social.github.username;
     
     // Fetch user profile and repos in parallel
     const [userResponse, reposResponse] = await Promise.all([
       fetch(`https://api.github.com/users/${username}`, {
         headers: {
           Accept: "application/vnd.github.v3+json",
-          "User-Agent": "TopBot-PwnZ-Portfolio",
+          "User-Agent": `${siteConfig.brand}-Portfolio`,
         },
         next: { revalidate: 300 },
       }),
       fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=10`, {
         headers: {
           Accept: "application/vnd.github.v3+json",
-          "User-Agent": "TopBot-PwnZ-Portfolio",
+          "User-Agent": `${siteConfig.brand}-Portfolio`,
         },
         next: { revalidate: 300 },
       }),

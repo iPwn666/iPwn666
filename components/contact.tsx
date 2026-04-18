@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Phone, MapPin, Github, Globe, MessageSquare } from "lucide-react";
+import { siteConfig } from "@/lib/data";
 
 export function Contact() {
   return (
@@ -18,7 +19,7 @@ export function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <a
-              href="mailto:FandaKalasek@icloud.com"
+              href={`mailto:${siteConfig.contact.email}`}
               className="flex items-center gap-4 p-6 rounded-2xl bg-card gradient-border card-hover group"
             >
               <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
@@ -26,12 +27,12 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted mb-1">Primary Email</p>
-                <p className="font-semibold text-foreground">FandaKalasek@icloud.com</p>
+                <p className="font-semibold text-foreground">{siteConfig.contact.email}</p>
               </div>
             </a>
 
             <a
-              href="tel:+420722426195"
+              href={`tel:${siteConfig.contact.phoneRaw}`}
               className="flex items-center gap-4 p-6 rounded-2xl bg-card gradient-border card-hover group"
             >
               <div className="p-3 rounded-xl bg-secondary/10 group-hover:bg-secondary/20 transition-colors">
@@ -39,7 +40,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted mb-1">Phone</p>
-                <p className="font-semibold text-foreground">+420 722 426 195</p>
+                <p className="font-semibold text-foreground">{siteConfig.contact.phone}</p>
               </div>
             </a>
 
@@ -49,15 +50,15 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted mb-1">Location</p>
-                <p className="font-semibold text-foreground">Czech Republic</p>
-                <p className="text-sm text-muted">Czech (native) / English (C1)</p>
+                <p className="font-semibold text-foreground">{siteConfig.location.displayShort}</p>
+                <p className="text-sm text-muted">{siteConfig.location.languages.join(" / ")}</p>
               </div>
             </div>
           </div>
 
           <div className="flex flex-col justify-center space-y-4">
             <a
-              href="https://github.com/iPwn666"
+              href={siteConfig.social.github.url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border card-hover group"
@@ -65,12 +66,12 @@ export function Contact() {
               <Github className="w-8 h-8 text-foreground group-hover:text-primary transition-colors" />
               <div>
                 <p className="font-semibold text-foreground">GitHub</p>
-                <p className="text-sm text-muted">@iPwn666</p>
+                <p className="text-sm text-muted">@{siteConfig.social.github.username}</p>
               </div>
             </a>
 
             <a
-              href="https://topwnz.com"
+              href={siteConfig.social.website.url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border card-hover group"
@@ -78,7 +79,7 @@ export function Contact() {
               <Globe className="w-8 h-8 text-foreground group-hover:text-secondary transition-colors" />
               <div>
                 <p className="font-semibold text-foreground">Portfolio</p>
-                <p className="text-sm text-muted">topwnz.com</p>
+                <p className="text-sm text-muted">{siteConfig.social.website.name}</p>
               </div>
             </a>
 
@@ -88,10 +89,9 @@ export function Contact() {
                 <p className="font-semibold text-foreground">How I Work</p>
               </div>
               <ul className="space-y-2 text-sm text-muted">
-                <li>Clear scope, written assumptions, transparent tradeoffs</li>
-                <li>Frequent progress updates (short demos &gt; long meetings)</li>
-                <li>Clean code, docs where it matters</li>
-                <li>Pragmatic engineering: build what moves the needle</li>
+                {siteConfig.professional.workStyle.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
