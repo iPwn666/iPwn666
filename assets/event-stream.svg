@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1280" height="590" viewBox="0 0 1280 590" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1280" height="866" viewBox="0 0 1280 866" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Recent event stream</title>
   <desc id="desc">Recent public GitHub activity for iPwn666.</desc>
-  <rect width="1280" height="590" rx="32" fill="#050814" />
+  <rect width="1280" height="866" rx="32" fill="#050814" />
   <text x="56" y="70" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Recent Event Stream</text>
-  <text x="1188" y="70" text-anchor="end" fill="#9eb2c7" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">18 Apr 2026, 01:55</text>
+  <text x="1188" y="70" text-anchor="end" fill="#9eb2c7" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">18 Apr 2026, 05:30</text>
   
             <g transform="translate(56 104)">
+              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
+              <circle cx="36" cy="36" r="8" fill="#94a3b8" />
+              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Delete on iPwn666/iPwn666</text>
+              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">public activity signal</text>
+              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">18 Apr 2026, 02:28</text>
+            </g>
+          
+            <g transform="translate(56 196)">
+              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
+              <circle cx="36" cy="36" r="8" fill="#f97316" />
+              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Created branch in iPwn666/iPwn666</text>
+              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">branding-design-update</text>
+              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">18 Apr 2026, 02:28</text>
+            </g>
+          
+            <g transform="translate(56 288)">
+              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
+              <circle cx="36" cy="36" r="8" fill="#f97316" />
+              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Created branch in iPwn666/iPwn666</text>
+              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">v0/ipwnz666-de45874c</text>
+              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">18 Apr 2026, 02:26</text>
+            </g>
+          
+            <g transform="translate(56 380)">
+              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
+              <circle cx="36" cy="36" r="8" fill="#f97316" />
+              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Created branch in iPwn666/iPwn666</text>
+              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">v0/ipwnz666-b84645b8</text>
+              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">18 Apr 2026, 02:26</text>
+            </g>
+          
+            <g transform="translate(56 472)">
+              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
+              <circle cx="36" cy="36" r="8" fill="#f97316" />
+              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Created branch in iPwn666/iPwn666</text>
+              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">v0/ipwnz666-e9831963</text>
+              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">18 Apr 2026, 02:22</text>
+            </g>
+          
+            <g transform="translate(56 564)">
               <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
               <circle cx="36" cy="36" r="8" fill="#14b8a6" />
               <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
@@ -14,7 +54,7 @@
               <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">2 Apr 2026, 13:57</text>
             </g>
           
-            <g transform="translate(56 196)">
+            <g transform="translate(56 656)">
               <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
               <circle cx="36" cy="36" r="8" fill="#14b8a6" />
               <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
@@ -22,28 +62,12 @@
               <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">2 Apr 2026, 13:45</text>
             </g>
           
-            <g transform="translate(56 288)">
+            <g transform="translate(56 748)">
               <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
               <circle cx="36" cy="36" r="8" fill="#14b8a6" />
               <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
               <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">activity on main</text>
               <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">2 Apr 2026, 13:28</text>
-            </g>
-          
-            <g transform="translate(56 380)">
-              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
-              <circle cx="36" cy="36" r="8" fill="#14b8a6" />
-              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
-              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">activity on main</text>
-              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">2 Apr 2026, 13:06</text>
-            </g>
-          
-            <g transform="translate(56 472)">
-              <rect width="1168" height="72" rx="20" fill="#09111d" stroke="rgba(148, 163, 184, 0.12)" />
-              <circle cx="36" cy="36" r="8" fill="#14b8a6" />
-              <text x="64" y="30" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Push on iPwn666/iPwn666</text>
-              <text x="64" y="54" fill="#c9d7e6" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="17">activity on main</text>
-              <text x="1050" y="43" text-anchor="end" fill="#87f4e5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">2 Apr 2026, 13:05</text>
             </g>
           
 </svg>
