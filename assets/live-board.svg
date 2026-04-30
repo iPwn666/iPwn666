@@ -12,7 +12,7 @@
   <rect x="34" y="34" width="1212" height="472" rx="28" stroke="rgba(56, 189, 248, 0.18)" />
   <text x="58" y="84" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="38" font-weight="700">Signal Board</text>
   <text x="58" y="116" fill="#bed1e4" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="19">README snapshot plus a linked browser-live control room.</text>
-  <text x="956" y="84" fill="#74f0df" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">SYNC 30 Apr 2026, 20:44</text>
+  <text x="956" y="84" fill="#74f0df" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">SYNC 30 Apr 2026, 22:19</text>
 
   <g transform="translate(58 138)">
     <rect width="668" height="28" rx="14" fill="rgba(148, 163, 184, 0.10)" />
@@ -48,26 +48,26 @@
         <g transform="translate(446 312)">
           <rect width="352" height="94" rx="22" fill="#09111d" stroke="rgba(148, 163, 184, 0.15)" />
           <text x="24" y="32" fill="#8ab8d4" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">Last repo touch</text>
-          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">30 Apr 2026, 18:47</text>
+          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">30 Apr 2026, 20:44</text>
         </g>
       
         <g transform="translate(834 312)">
           <rect width="352" height="94" rx="22" fill="#09111d" stroke="rgba(148, 163, 184, 0.15)" />
           <text x="24" y="32" fill="#8ab8d4" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">Last signal</text>
-          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">no public events</text>
+          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">18 Apr 2026, 02:28</text>
         </g>
       
 
   <g transform="translate(780 188)">
     <rect width="418" height="244" rx="26" fill="#08111d" stroke="rgba(249, 115, 22, 0.18)" />
     <text x="28" y="40" fill="#fdba74" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15">EVENT MIX</text>
-    <text x="28" y="72" fill="#fff7ed" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">0 recent public signal(s)</text>
+    <text x="28" y="72" fill="#fff7ed" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">8 recent public signal(s)</text>
     
         <g transform="translate(780 462)">
           <text x="0" y="16" fill="#a9bed2" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">PUSH</text>
           <rect x="92" y="2" width="250" height="18" rx="9" fill="rgba(148, 163, 184, 0.10)" />
-          <rect x="92" y="2" width="28" height="18" rx="9" fill="#14b8a6" />
-          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">0</text>
+          <rect x="92" y="2" width="130" height="18" rx="9" fill="#14b8a6" />
+          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">3</text>
         </g>
       
         <g transform="translate(780 416)">
@@ -94,15 +94,15 @@
         <g transform="translate(780 278)">
           <text x="0" y="16" fill="#a9bed2" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">CREATE</text>
           <rect x="92" y="2" width="250" height="18" rx="9" fill="rgba(148, 163, 184, 0.10)" />
-          <rect x="92" y="2" width="28" height="18" rx="9" fill="#f97316" />
-          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">0</text>
+          <rect x="92" y="2" width="164" height="18" rx="9" fill="#f97316" />
+          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">4</text>
         </g>
       
         <g transform="translate(780 232)">
           <text x="0" y="16" fill="#a9bed2" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">OTHER</text>
           <rect x="92" y="2" width="250" height="18" rx="9" fill="rgba(148, 163, 184, 0.10)" />
-          <rect x="92" y="2" width="28" height="18" rx="9" fill="#94a3b8" />
-          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">0</text>
+          <rect x="92" y="2" width="62" height="18" rx="9" fill="#94a3b8" />
+          <text x="356" y="16" fill="#eff6ff" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">1</text>
         </g>
       
   </g>
