@@ -13,11 +13,11 @@
   "following": 1,
   "memberSince": "10 Feb 2026, 13:47",
   "memberSinceShort": "10 Feb 2026",
-  "repoUpdatedAt": "2026-04-30T22:09:09Z",
-  "repoUpdatedAtDisplay": "1 May 2026, 00:09",
-  "lastEventAt": "no public events",
-  "generatedAt": "2026-04-30T23:09:37.358Z",
-  "generatedAtPrague": "1 May 2026, 01:09",
+  "repoUpdatedAt": "2026-04-30T23:09:42Z",
+  "repoUpdatedAtDisplay": "1 May 2026, 01:09",
+  "lastEventAt": "18 Apr 2026, 02:28",
+  "generatedAt": "2026-05-01T00:05:16.144Z",
+  "generatedAtPrague": "1 May 2026, 02:05",
   "focusTracks": [
     "device tooling",
     "iOS internals",
@@ -25,12 +25,69 @@
     "native AI loops"
   ],
   "eventCounts": {
-    "push": 0,
-    "create": 0,
+    "push": 3,
+    "create": 4,
     "star": 0,
     "issue": 0,
     "pr": 0,
-    "event": 0
+    "event": 1
   },
-  "events": []
+  "events": [
+    {
+      "kind": "event",
+      "accent": "#94a3b8",
+      "absolute": "18 Apr 2026, 02:28",
+      "summary": "Delete on iPwn666/iPwn666",
+      "detail": "public activity signal"
+    },
+    {
+      "kind": "create",
+      "accent": "#f97316",
+      "absolute": "18 Apr 2026, 02:28",
+      "summary": "Created branch in iPwn666/iPwn666",
+      "detail": "branding-design-update"
+    },
+    {
+      "kind": "create",
+      "accent": "#f97316",
+      "absolute": "18 Apr 2026, 02:26",
+      "summary": "Created branch in iPwn666/iPwn666",
+      "detail": "v0/ipwnz666-de45874c"
+    },
+    {
+      "kind": "create",
+      "accent": "#f97316",
+      "absolute": "18 Apr 2026, 02:26",
+      "summary": "Created branch in iPwn666/iPwn666",
+      "detail": "v0/ipwnz666-b84645b8"
+    },
+    {
+      "kind": "create",
+      "accent": "#f97316",
+      "absolute": "18 Apr 2026, 02:22",
+      "summary": "Created branch in iPwn666/iPwn666",
+      "detail": "v0/ipwnz666-e9831963"
+    },
+    {
+      "kind": "push",
+      "accent": "#14b8a6",
+      "absolute": "2 Apr 2026, 13:57",
+      "summary": "Push on iPwn666/iPwn666",
+      "detail": "activity on main"
+    },
+    {
+      "kind": "push",
+      "accent": "#14b8a6",
+      "absolute": "2 Apr 2026, 13:45",
+      "summary": "Push on iPwn666/iPwn666",
+      "detail": "activity on main"
+    },
+    {
+      "kind": "push",
+      "accent": "#14b8a6",
+      "absolute": "2 Apr 2026, 13:28",
+      "summary": "Push on iPwn666/iPwn666",
+      "detail": "activity on main"
+    }
+  ]
 }
