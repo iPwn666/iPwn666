@@ -13,11 +13,11 @@
   "following": 1,
   "memberSince": "10 Feb 2026, 13:47",
   "memberSinceShort": "10 Feb 2026",
-  "repoUpdatedAt": "2026-05-02T17:06:41Z",
-  "repoUpdatedAtDisplay": "2 May 2026, 19:06",
+  "repoUpdatedAt": "2026-05-02T18:02:34Z",
+  "repoUpdatedAtDisplay": "2 May 2026, 20:02",
   "lastEventAt": "18 Apr 2026, 02:28",
-  "generatedAt": "2026-05-02T18:02:30.240Z",
-  "generatedAtPrague": "2 May 2026, 20:02",
+  "generatedAt": "2026-05-02T19:17:38.666Z",
+  "generatedAtPrague": "2 May 2026, 21:17",
   "focusTracks": [
     "device tooling",
     "iOS internals",
@@ -25,7 +25,7 @@
     "native AI loops"
   ],
   "eventCounts": {
-    "push": 3,
+    "push": 0,
     "create": 4,
     "star": 0,
     "issue": 0,
@@ -67,27 +67,6 @@
       "absolute": "18 Apr 2026, 02:22",
       "summary": "Created branch in iPwn666/iPwn666",
       "detail": "v0/ipwnz666-e9831963"
-    },
-    {
-      "kind": "push",
-      "accent": "#14b8a6",
-      "absolute": "2 Apr 2026, 13:57",
-      "summary": "Push on iPwn666/iPwn666",
-      "detail": "activity on main"
-    },
-    {
-      "kind": "push",
-      "accent": "#14b8a6",
-      "absolute": "2 Apr 2026, 13:45",
-      "summary": "Push on iPwn666/iPwn666",
-      "detail": "activity on main"
-    },
-    {
-      "kind": "push",
-      "accent": "#14b8a6",
-      "absolute": "2 Apr 2026, 13:28",
-      "summary": "Push on iPwn666/iPwn666",
-      "detail": "activity on main"
     }
   ]
 }
