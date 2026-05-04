@@ -12,7 +12,7 @@
   <rect x="34" y="34" width="1212" height="472" rx="28" stroke="rgba(56, 189, 248, 0.18)" />
   <text x="58" y="84" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="38" font-weight="700">Signal Board</text>
   <text x="58" y="116" fill="#bed1e4" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="19">README snapshot plus a linked browser-live control room.</text>
-  <text x="956" y="84" fill="#74f0df" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">SYNC 4 May 2026, 14:55</text>
+  <text x="956" y="84" fill="#74f0df" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">SYNC 4 May 2026, 17:20</text>
 
   <g transform="translate(58 138)">
     <rect width="668" height="28" rx="14" fill="rgba(148, 163, 184, 0.10)" />
@@ -48,7 +48,7 @@
         <g transform="translate(446 312)">
           <rect width="352" height="94" rx="22" fill="#09111d" stroke="rgba(148, 163, 184, 0.15)" />
           <text x="24" y="32" fill="#8ab8d4" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">Last repo touch</text>
-          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">4 May 2026, 12:24</text>
+          <text x="24" y="66" fill="#f8fafc" font-family="Space Grotesk, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">4 May 2026, 14:55</text>
         </g>
       
         <g transform="translate(834 312)">
